@@ -1,0 +1,29 @@
+/* \
+--Z-index
+the default is that the last element go above all and the next last above the rest(if all have position)
+z can be any number (the more goes above)
+for z to work it needs position , if one have position and the other don't the one with position will be above
+used for pop up menus.....
+to make element last give it z-index: -1
+ */
+
+div {
+    width: 100px;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+}
+
+.one {
+    background-color: red;
+}
+
+.two {
+    background-color: green;
+}
+
+.three {
+    background-color: blue;
+    z-index: -1;
+}

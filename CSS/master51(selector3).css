@@ -1,0 +1,36 @@
+/*
+  CSS Selectors
+  - :first-child, p:first-child => it must be 'p' and the first of all types of elements
+  - :last-child, p:last-child => it must be 'p' and the last of all types of elements,script is the last child (see devtools)
+  - :first-of-type, not necessary first child, it is from children(the direct from each) the first of the type
+  - :last-of-type , you can group first-child with others....
+  - :only-child, p:only-child => target 'p' w'h is the only child for the parent
+  - :only-of-type, p:only-of-type => requires to have only one 'p' in the parent to apply it
+*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+  }
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  /* p:first-child {
+    color: red;
+  } */
+  /* p:last-child {
+    color: red;
+  } */
+  /* p:first-of-type {
+    color: red;
+  } */
+  /* p:last-of-type {
+    color: red;
+  } */
+  /* p:only-child {
+    color: red;
+  } */
+  /* p:only-of-type {
+    color: red;
+  } */

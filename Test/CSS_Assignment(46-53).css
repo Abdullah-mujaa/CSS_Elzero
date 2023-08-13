@@ -1,0 +1,236 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --maincolor: #eee;
+    --maincolor2: #ccc;
+    --orangecolor: #ff5722;
+    --mainpadding: 10px;
+
+}
+
+.ass-01 div {
+    width: 100px;
+    height: 100px;
+    background-color: var(--maincolor);
+    color: var(--orangecolor);
+    font-weight: bold;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    /* the following line is taken from (https://codepen.io/Mohamed-Galal91/pen/LYjMKrx)  */
+    box-shadow:
+        6px 0 var(--orangecolor),
+        -6px 0 #03a9f4;
+    /* border: 4px solid;
+    border-color:#ff5722 #ff5722  #03a9f4 #03a9f4  ;
+    position: relative; */
+}
+
+/* div::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 5px;
+    background-color: #ff5722;
+    background-color: #03a9f4;
+} */
+.ass-02 .parent {
+    background-color: var(--maincolor);
+    width: 600px;
+    height: 300px;
+    padding: var(--mainpadding);
+    margin: 20px auto;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: space-between;
+    justify-content: space-between;
+}
+
+.ass-02 .parent div {
+    background-color: var(--orangecolor);
+    color: white;
+    /* width: 170px; */
+    width: calc(94%/3);
+    /*these line is taken from Mohammed_Galal */
+    padding: var(--mainpadding);
+    text-align: center;
+}
+
+.ass-03 .parent {
+    background-color: var(--maincolor);
+    width: 600px;
+    height: 300px;
+    padding: var(--mainpadding);
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.ass-03 .parent div {
+    background-color: #607d8b;
+    color: white;
+    width: calc(94%/3);
+    padding: var(--mainpadding);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ass-04 .parent {
+    background-color: var(--maincolor);
+    width: 600px;
+    height: 300px;
+    padding: var(--mainpadding);
+    margin: 20px auto;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.ass-04 .parent div {
+    background-color: #009688;
+    color: white;
+    height: calc(94%/3);
+    padding: var(--mainpadding);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ass-05 .parent {
+    background-color: var(--maincolor);
+    width: 600px;
+    height: 300px;
+    padding: var(--mainpadding);
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+    /* align-items: flex-start;
+    corrected from mohammed gallal w'h i thought they will strech but i recognized i gave them height */
+}
+
+.ass-05 .parent div {
+    color: white;
+    width: calc(77%/4);
+    height: 50%;
+    padding: var(--mainpadding);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ass-05 .parent .one {
+    background-color: #ff9800;
+}
+
+.ass-05 .parent .two {
+    background-color: #8bc34a;
+}
+
+.ass-05 .parent .three {
+    background-color: #795548;
+}
+
+.ass-05 .parent .four {
+    order: -1;
+    background-color: #673ab7;
+}
+
+.ass-05 .parent .two,
+.ass-05 .parent .four {
+    align-self: flex-end;
+}
+
+.ass-06 .page {
+    background-color: var(--maincolor);
+    height: 100vh;
+    padding: var(--mainpadding);
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+
+.ass-06 .page .header,
+.ass-06 .page .main-area,
+.ass-06 .page .footer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: transparent;
+}
+
+.ass-06 .page .header {
+    height: 10%;
+}
+
+.ass-06 .page .header .logo {
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ass-06 .page .header ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 88%;
+}
+
+.ass-06 .page .header ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.ass-06 .page .main-area {
+    height: 78%;
+}
+
+.ass-06 .page .main-area .content {
+    width: 70%;
+    padding: var(--mainpadding);
+}
+
+.ass-06 .page .main-area .sidebar {
+    width: 28%;
+    padding: var(--mainpadding);
+}
+
+.ass-06 .page .footer {
+    height: 8%;
+}
+
+.ass-06 .page .footer div {
+    width: 50%;
+}
+
+.ass-06 .page .footer .design {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 10px;
+}
+.ass-06 .page .footer .copyright {
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+
+.ass-06 .page .header .logo,
+.ass-06 .page .header .links,
+.ass-06 .page .main-area div,
+.ass-06 .page .footer div {
+    background-color: var(--maincolor2);
+}

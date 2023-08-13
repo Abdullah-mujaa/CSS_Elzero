@@ -1,0 +1,17 @@
+/* 
+contenteditable="" => you can make a para  ... by this attribute(html)
+caret-color => the vertical line inside any text.
+Pointer-events => pointer(known) events => click , hover....
+ */
+
+a:hover {
+    color: red;
+}
+a {
+    pointer-events: none;
+    /* use case in game after an option is chosen (5:45:40) */
+}
+input,
+p {
+    caret-color: red;
+}

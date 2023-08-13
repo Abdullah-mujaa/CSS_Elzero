@@ -1,0 +1,29 @@
+/* The syntax of css  */
+/* Selector {
+    property : Value;
+    propertytwo: Value
+} One line of these is called declaration */
+
+
+/* .my-p {
+    color: red;
+    font-size:40px;
+}
+/* Using id for css is not recommended */
+/* #my-p {
+    color: red;
+    font-size:40px;
+}  */
+
+/* Target All Paragraphs */
+
+p {
+    color: red;
+}
+/* elements with classes*/
+.special {
+    color: blue;
+}
+/* Inline CSS is stronger than all (override) but the recommeded of all is external css */
+
+

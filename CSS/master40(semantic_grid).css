@@ -1,0 +1,65 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li {
+    display: inline-block;
+}
+
+.page {
+    height: 100vh; /*this brought a big change*/
+    background-color: #eee;
+    display: grid;
+    /* we will make a page of 10 grid */
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: 50px auto 50px;
+    /* grid-template-rows: 10vh auto 7vh; this is by me w1 think it is good */
+    /* in the next line will talk about how rows(1 row = b/n the "") take the 10 grid */
+    grid-template-areas: 
+    "logo logo nav nav nav nav nav nav nav nav"
+    "cont cont cont cont cont cont cont . side side"
+    "foot foot foot foot foot foot foot foot foot foot";
+}
+/* 
+'.' = to make space b/n grids */
+
+h3,
+nav,
+section,
+aside,
+footer {
+    color: white;
+}
+
+h3 {
+    grid-area: logo;
+    background-color: red;
+}
+
+nav {
+    grid-area: nav;
+    background-color: blue;
+}
+
+section {
+    grid-area: cont;
+    background-color: yellow;
+}
+
+aside {
+    grid-area: side;
+    background-color: green;
+}
+
+footer {
+    grid-area: foot;
+    background-color: black;
+}
+
+/* we did a responsive page */

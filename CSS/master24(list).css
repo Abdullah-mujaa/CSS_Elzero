@@ -1,0 +1,19 @@
+/* 
+list-style-type(unusual) => You can see the list-style-type in the options of dev tools(unusual) there is  another innovative way....
+list-style-position(unusual) => inside and outside(inside:the bullet will be edited together)
+to reset the list (often it will be reseted) margin =0 , padding=0 , list-style:none; 
+(so what is the use (why don't normal txt) : this is better for putting links side by side.(use case)
+*/
+
+ul {
+    list-style-type: square;
+    /* list-style-image: url(../imgs/css-assignment-5-8.png) ; */
+    list-style-position: inside ;
+    list-style: square inside ;
+    
+}
+
+li{
+    background-color: #ddd;
+    margin-bottom: 10px;
+}

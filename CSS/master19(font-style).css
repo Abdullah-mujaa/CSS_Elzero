@@ -1,0 +1,28 @@
+/* 
+--Font Style(unusual):italic,oblique(italic for d/t font-family),normal(used in reseting italic text to normal)
+--Font Variant(unusual):small-caps(uppercase where the first letters are larger)
+--Font Weight => bold(usual) & unusual(100-900) ,(used in reseting bold(e.g headings) text to normal
+*/
+
+/* div {
+    font-variant: small-caps;
+}
+
+p {
+    text-transform: uppercase;
+}
+
+div {
+    font-weight: bold;
+}
+
+h1 {
+    font-weight: normal;
+} */
+/* ======= */
+/* 
+--Cursor = many values (try wait/progress)
+        used for e.g in button where there is no background color / ....the defaults so 'pointer' indicts that
+        it is about giving hint to the user what he is goint to do(User Experience) for example...go see div tool.
+        Any change you see in the cursor it is CSS
+*/

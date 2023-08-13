@@ -1,0 +1,159 @@
+/* Assign-01 */
+.ass-01 div {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+
+.ass-01 .green {
+    background-color: #009688;
+    z-index: 2;
+    left: 30px;
+    top: 10px;
+}
+
+.ass-01 .red {
+    background-color: #F44336;
+    z-index: 3;
+    left: 40px;
+    top: 16px;
+}
+
+.ass-01 .blue {
+    background-color: #03A9F4;
+    z-index: 1;
+    top: 3px;
+    left: 20px;
+}
+
+.ass-01 .black {
+    background-color: black;
+    position: absolute;
+    left: 20px;
+    top: 10px;
+    z-index: -1;
+}
+
+/* Assign-02 */
+.ass-02 div {
+    width: 400px;
+    padding: 20px;
+    background-color: #eee;
+    margin: 150px auto;
+    border: 2px solid;
+    border-color: #F44336 #03A9F4;
+    position: relative;
+}
+
+.ass-02 div span {
+    background-color: #03A9F4;
+    padding-left: 8px;
+    padding-right: 8px;
+    color: white;
+    position: absolute;
+}
+
+.ass-02 .top-left,
+.ass-02 .bottom-left {
+    border-right: 2px solid red;
+    left: -10px;
+}
+
+.ass-02 .top-right,
+.ass-02 .bottom-right {
+    border-left: 2px solid red;
+    right: -10px;
+}
+
+.ass-02 .top-right,
+.ass-02 .top-left {
+    top: -10px;
+}
+
+.ass-02 .bottom-right,
+.ass-02 .bottom-left {
+    bottom: -10px;
+}
+
+/* Assign-03 */
+.ass-03 .parent {
+    width: 400px;
+    list-style: none;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 20px auto;
+}
+
+.ass-03 .parent li {
+    padding: 10px;
+}
+
+.ass-03 .parent li ol li, 
+.ass-03 .parent li ul li {
+    background-color: white;
+    margin-top: 5px;
+}
+
+.ass-03 .parent .html,
+.ass-03 .parent .css,
+.ass-03 .parent .javascript {
+    background-color: #eee;
+    margin-bottom: 20px;
+}
+
+.ass-03 .parent .javascript ul {
+    list-style-position: inside;
+    padding-left: 0;
+}
+
+/* Assign-04 */
+.ass-04 table {
+    width: 700px;
+    margin: 20px auto;
+    text-align: center;
+    background-color: #ebe8e8;
+    border-collapse: collapse;
+    font-family: Arial, Helvetica, sans-serif;
+    border-bottom: 2px solid #009688; 
+    /* it needs some ta3del */
+}
+
+.ass-04 table tbody tr {
+    height: 100px;
+}
+
+.ass-04 table caption  {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.ass-04 table tr td {
+    border: 1px solid white;
+}
+
+.ass-04 table thead tr td{
+    background-color: #404040;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.ass-04 table tbody .last td {
+    border-bottom: 0;
+}
+
+.ass-04 table tbody tr .view,
+.ass-04 table tbody tr .delete{
+    color: white;
+    padding: 3px 6px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.ass-04 table tbody tr .view {
+    background-color: #03A9F4;
+}
+
+.ass-04 table tbody tr .delete {
+    background-color: #e91e63;
+}
+

@@ -1,0 +1,44 @@
+/*
+  CSS Global Values
+  - inherit=>known
+  - initial=>these is the default, the default for all elements is "display:inline" that is why you see in devtools 'user-agent....'
+  - unset
+  --- If Inherit => inherit
+  --- If Not => initial
+  - revert CSS Level [4] => changes to 'user-agent' rather than initial
+  - all
+*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+  }
+  div {
+    color: red;
+    font-size: 40px;
+    font-weight: bold;
+    background-color: #eee;
+    padding: 20px;
+    margin: 5px;
+    border: 2px solid black;
+  }
+
+  button {
+    color: unset;
+    color: inherit;
+    border: unset;
+    border: initial;
+  }
+
+  button {
+    all: unset;
+    /* some as writing the follwing  */
+    font-size: inherit;
+    color: inherit;
+    font-weight: inherit;
+    border: initial;
+  }
+
+  body {
+    margin: revert;
+  }

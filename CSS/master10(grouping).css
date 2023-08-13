@@ -1,0 +1,47 @@
+.one {
+    /* padding: 10px; */
+    border-bottom: 2px solid red;
+    color: red;
+    /* margin: 10px 0px;
+    background-color: #EEE; */
+}
+
+.two {
+    /* padding: 10px; */
+    border-bottom: 2px solid green;
+    color: green;
+    /* margin: 10px 0px;
+    background-color: #EEE; */
+}
+
+.three {
+    /* padding: 10px; */
+    border-bottom: 2px solid blue;
+    color: blue;
+    /* margin: 10px 0px;
+    background-color: #EEE; */
+}
+
+.four {
+    /* padding: 10px; */
+    border-bottom: 2px solid black;
+    color: black;
+    /* margin: 10px 0px;
+    background-color: #EEE; */
+}
+
+/* to change the commonalities of each div will take long time
+for eg.increase each div margin by 10px so we group them */
+
+.one,
+.two,
+.three,
+.four,
+.my-p {
+    padding: 10px;
+    margin: 10px 0px;
+    background-color: #EEE;
+}
+
+/* from these lesson take the background color
+border bottom  margin  padding*/

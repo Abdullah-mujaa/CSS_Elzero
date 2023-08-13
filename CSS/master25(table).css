@@ -1,0 +1,29 @@
+/*
+ see the default table styling in devtools 
+ Use these(the e.g) colours in practical 
+ */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+table {
+    width: 100%;
+    /* border: 1px solid #eee; We removed it after giving color to the head so it is clear and no need of border (also even if no border is given for the td) */
+    border-spacing: 0px; /*We brought the lines b/n by giving each cell a border*/
+    /* border-collapse: collapse;  in mdn i have seen that the left covers the right and the top the bottom*/
+}
+
+table td {
+    padding: 10px;
+    background-color: #ccc;
+    border: 1px solid #e2e2e2;
+}
+
+table thead td {
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    border-color: red; /*by setting similar(nearly) color as background we cover the border (although you can set it lonely)*/
+}

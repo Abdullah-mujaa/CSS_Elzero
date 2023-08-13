@@ -1,0 +1,34 @@
+/* 
+--The Box Model
+--Box Sizing
+*/
+
+.parent {
+    width: 600px;
+    overflow: hidden;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ddd;
+}
+
+.one {
+    background-color: #eee;
+    width: 300px;
+    float: left;
+    /* margin-right: 10px; */
+    /* these margin(20) should be added to the width of the parent to have them side by side */
+    padding: 10px;
+    border: 10px solid red;
+    box-sizing: content-box; /*default => border,padding is added to the element size(w & h)*/
+    box-sizing: border-box; /*these will help you (you won't need to increse size of the parent to place elements
+    side by side ) b/c border and padding will be part of the width(not added to it) so your width is respecting 
+    no matter how much added (for the height we didn't specified height so it will increase withe padding and border
+    (our concern is placing elements side by side so leave the height unspecifed)*/
+}
+
+/* for all elments as follow */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}

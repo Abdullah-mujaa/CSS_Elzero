@@ -1,0 +1,108 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --mainpadding: 20px;
+    --maincolor: #eee;
+    --orangecolor: #f44336;
+    --purplecolor: #673ab7;
+}
+
+ /* Assign-01  */
+
+.ass-01 div {
+    width: 600px;
+    background-color: #eee;
+    text-align: center;
+    font-weight: bold;
+    margin: 50px auto;
+    font-size: 50px;
+    padding: var(--mainpadding);
+    position: relative;
+    border-left: 10px solid var(--orangecolor);
+    border-right: 10px solid var(--purplecolor);
+}
+
+.ass-01 div::first-letter {
+    color: var(--orangecolor);
+}
+
+.ass-01 div::before {
+    content: "";
+    background-image: linear-gradient(to right,
+    var(--orangecolor) 20%,
+    #2196f3 20%,
+    #2196f3 40%,
+    #4caf50 40%,
+    #4caf50 60%,
+    #ea1f64 60%,
+    #ea1f64 80%,
+    var(--purplecolor) 80%
+    );
+    width: 103.6%;
+    height: 10px;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+}
+
+.ass-01 div::after {
+    content: "";
+    background-image: linear-gradient(to right,
+    var(--orangecolor) 20%,
+    #2196f3 20%,
+    #2196f3 40%,
+    #4caf50 40%,
+    #4caf50 60%,
+    #ea1f64 60%,
+    #ea1f64 80%,
+    var(--purplecolor) 80%
+    );    
+    width: 103.6%;
+    height: 10px;
+    position: absolute;
+    bottom: -10px;
+    left: -10px;
+}
+
+ /* Assign-02  */
+
+.ass-02 {
+    width: 600px;
+    margin: 50px auto;
+}
+
+.ass-02 input {
+    display: block;
+    caret-color: red;
+    margin-bottom: var(--mainpadding);
+    width: 100%;
+    background-color: var(--maincolor);
+    padding: var(--mainpadding);
+    border: none;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.ass-02 input:focus {
+    outline: none;
+}
+
+.ass-02 div{
+    position: relative;
+}
+
+.ass-02 div::before {
+    content: "";
+    width: 100%;
+    height: 5px;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    background-image: linear-gradient(to right,
+    var(--orangecolor) 50%,
+    #019789 50%,
+    #019789
+    );
+}

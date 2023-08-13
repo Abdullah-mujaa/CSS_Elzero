@@ -1,0 +1,69 @@
+/* Assign-01 */
+
+.ass-01 .parent {
+    background-color: #eee;
+    text-align: center;
+    width: 1000px;
+    font-weight: bold;
+}
+
+.ass-01 div {
+    background-color: #eee;
+    padding-top: 1px;
+}
+
+.ass-01 .parent div div {
+    background-color: #ccc;
+    margin-top: 15px;
+    margin-left: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.ass-01 .zero {
+    width: calc(100% - 15px);
+}
+.ass-01 .one div,
+.ass-01 .two div,
+.ass-01 .three div {
+    float: left;
+}
+
+.ass-01 .one div {
+    width: calc((100% - 60px) / 3);
+}
+
+.ass-01 .two div {
+    width: calc((100% - 45px) / 2);
+}
+
+.ass-01 .three div {
+    width: calc((100% - 75px) / 4);
+    margin-bottom: 15px;
+}
+
+.ass-01 .clear {
+    clear: both;
+}
+
+/*Assign-02*/
+
+.ass-02 div {
+    margin: 20px auto;
+    width: 300px;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 20px;
+    background-color: #b3b3b3;
+    color: black;
+  }
+
+.ass-02 .one {
+    background-color: rgba(179, 179, 179, 0.1);
+}
+
+.ass-02 .two {
+    opacity: 0.1;
+}
+
+

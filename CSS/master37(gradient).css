@@ -1,0 +1,77 @@
+/* 
+Gradient
+linear-gradient(Direction || Angle, Color Stop 1 width(optional), Color Stop 2, ....)
+90 degree = to left
+setting for the same color one after another(make beginning and end and prevents gradient)
+*/
+
+div {
+    /* background-image: linear-gradient(0, rgba(255, 0, 0, .4), #0f0, #ff2 50%); */
+    width: 400px;
+    height: 300px;
+    background-color: #eee;
+    margin: 20px auto;
+    position: relative;
+    padding: 10px;
+}
+
+div::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: 0px;
+    width: 100%;
+    height: 5px;
+    background-color: red;
+    /* you can't make the ff by border  */
+    background-image: linear-gradient(
+        to right,
+        #2196f3 20%,
+        #27ae60 20%, /*this color starts from 20% and ends in 40%*/
+        #27ae60 40%, 
+        #ff5722 40%, 
+        #ff5722 60%, 
+        #8e44ad 60%, 
+        #8e44ad 80%, 
+        #c0392b 80% /*this starts and b/c nothing is left it goes to the end*/
+    );
+}
+/* Do ten color border like the above one  */
+.gradient {
+    width: 400px;
+    height: 300px;
+    background-color: #eee;
+    margin: 20px auto;
+    position: relative;
+    padding: 10px;
+}
+
+.gradient::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: 0px;
+    width: 100%;
+    height: 5px;
+    background-image: linear-gradient(
+        to right,
+        #2196f3 10%,
+        #27ae60 10%, 
+        #27ae60 20%, 
+        #ff5722 20%, 
+        #ff5722 30%, 
+        #8e44ad 30%, 
+        #8e44ad 40%, 
+        #c0392b 40%,
+        #c0392b 50%,
+        #795548 50%,
+        #795548 60%,
+        #ffeb3b 60%,
+        #ffeb3b 70%,
+        #e91e63 70%,
+        #e91e63 80%,
+        #607d8b 80%,
+        #607d8b 90%,
+        #255c3f 90%
+    );
+}

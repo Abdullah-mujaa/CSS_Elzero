@@ -1,0 +1,50 @@
+/* 
+--Flex Child
+---flex-grow: 0 => Default value , when you give them one number all children will grow equally to fit the container
+------------------if we give to one element 3 and the rest 1, the 'three' will grow 3times than the others if there is space but if there is no space the number will not have tekm and all will be equal ( incresre the width of the parent to see the changes)
+---flex-shrink: 1 => Default ,it is the opposite of flex-grow where in here we give to an element more flexshrink so it have priority to shrink(3la hesab albe8eya)  until all elments become equal
+---order:0 => default if you give the first element any number otherthan 1 it will go last and the greater number goes the last and less greater before ....Use case: guess game(6:02:00) how it would be without flex....0h
+--flex-basis:auto => default(if childs have width so these will be the flex-basis if not the flex-basis wiil be the content size)
+---normally in flex box if there is enough space you set width(or flex-basis) of the elements as you like but once the size of the parent(flex box) gets lower the control goes to the flex box and it weza3 al elements until(with parent size decreasing) one with higher width becomes equal to the others
+---flex-basis:300px; this works for both width and height(what makes it better than the dimensions), it becomes height when flex-dir:col; and width when flex-dir:row;.
+---flex-basis only works for flex elements Use case(6:00:00) in responsive if you want to change what was in row orderd to column.
+---it respects max-width so it don't go above it.
+---flex shorthand => flex: [flex-grow] [flex-shrink] [flex-basis] 0 1 Auto
+-----flex is smart flex:200px => he know px,% units are for flex-basis so the rest will stay default
+                        :2 => 2 1 0%, it know 1 can't be for flex-basis
+                        :2 200px => 2 1 200px
+                        :1 200px => it will grow more than the others and it will be more than 200px(no prob b/c flex-basis is the beginning only)
+                        Q in flex https://stackoverflow.com/questions/68117375/what-does-auto-and-content-value-of-flex-basis-do
+display:inline-flex;(in the parent)it will be totally flex but can bring next to it another element
+---align-self(semantic):auto => default(it will act like its neighbor by the value given by the parent(stretch),flex-end(all stretch u only in the end ),align-items:flex-start(all up and you alone down). so you move flexibly , even if the parent is flex-end, your beginning is the normal beginning so your flex-start will be left .
+To understand more and fully see "mdn: basic concepts of flexbox"
+-----what i learned form the above line => flex-direction:main-axis and the perpendicular is the cross-axis so : align-items (works in the cross while justify in the main)so if the flex-dir=main=veritcal so justify-content works vertically.
+*/
+
+
+* {
+    box-sizing: border-box;
+}
+
+.flex {
+    background-color: #eee;
+    width: 800px;
+    padding: 20px;
+    margin: 20px auto;
+    display: flex;
+    height: 300px;
+  }
+
+.flex div {
+    background-color: #f00;
+    color: white;
+    width: 80px;
+    text-align: center;
+    padding: 20px;
+    margin-right: 5px;
+    flex-grow: 1;
+  }
+  
+.in {
+    display: inline-block;
+}

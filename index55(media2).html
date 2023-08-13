@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CSS</title>
+    <link rel="stylesheet" href="css/master55(media2).css" />
+    <link rel="stylesheet" href="css/master55(print).css" media="print" />
+    <link rel="stylesheet" href="css/master55(print2).css" media="(min-width: 1000px) and (max-width: 1400px)" />
+    <style media="print">
+      .parent > div {
+        font-size: 100px;
+        color: green;
+      }
+      /* so we can use 'media' in link/style/css_file , it is better to put it below the 
+      css in the css file to access it */
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+    </div>
+  </body>
+</html>

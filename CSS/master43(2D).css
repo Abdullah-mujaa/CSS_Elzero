@@ -1,0 +1,139 @@
+/* 
+--2D Transform => scale
+--it is like  width(x) and height(y) but there is d/ces (when we increase width we are just increasing the horizontal length but withe 'scalex' we stretch the margin , txt inside.
+--transform: scale(2) => is like scaleX(2) and scaleY(2) w'h is twice height and width
+--(-ve) value will flip it in x or y or both .Use devtools to see the transition
+b/c transform after transform , the former will be overridden do transform: translate() rotate() ....
+=================================
+--Rotate
+---deg => degrees , this is the most used and easy
+---rad => radians, 'use devtools'
+---grad => gradians, 'use devtools'
+---turn => as if from 0 - 1, .5=180deg
+================================
+--translate (x,y)
+---move in x-axis , move in y-axis (giving one no. doesn't mean it is for the 2nd too(it will stay '0').these is also for skew)
+----it can be in px,rem,%...
+-----it is better than position(https://www.paulirish.com/2012/why-moving-elements-with-translate-is-better-than-posabs-topleft/)
+------it is better than position in that position can't be used with matrix . watch also '8:14:30'https://elzero.org/center-elements-horizontally-and-vertically-css/
+------Centering: with position you need the margin to be half of the width and height but in translate => translate(-50%,-50%) it will move half of its width to the left and half of its height up
+=======================
+--Skew (الانحراف)
+---SkewX
+---SkewY 
+=======================
+--matrix
+-matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY())
+You can do the above line with 'transform: scaleX() skewY() skewX() scaleY() translateX() translateY()' but there
+will be d/ce so use instead 'transform: translateX() translateY() scaleX() skewY() skewX() scaleY() ' tansform translate the element before......
+    transform: matrix(1, 0.2679, 0, 1, 20, 20);
+    0.2679 = 15deg(as if you wrote skewY(15deg), it is tan ....read more , the 20 is in 'px')
+=======================
+  transform-origin
+  Syntax
+  Default Values => 50% 50% 0
+  2D Transform => transform-origin(X, Y)
+  3D Transform => transform-origin(X, Y, Z)
+  X-Axis
+  - CSS Unit [px, em, rem]
+  - %
+  - Keyword
+  -- Left = 0%
+  -- Center = 50%
+  -- Right = 100%
+  Y-Axis
+  - CSS Unit [px, em, rem]
+  - %
+  - Keyword
+  -- Top = 0%
+  -- Center = 50%
+  -- Bottom = 100%
+*/
+
+.parent {
+    margin: 200px auto;
+    width: 230px;
+    height: 230px;
+    background-color: #aaa;
+    position: relative;
+}
+.transform {
+    margin: 200px auto;
+    width: 90%;
+    height: 90%;
+    background-color: rgb(255 0 0 / 39%);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 30px;
+    transform: scale(1.5);
+    transform: scale(-1);
+    transition: .5s;
+    /* transform: rotate(360deg); */
+    /* transform: rotate(6.28rad); */
+    /* transform: rotate(400grad); */
+    /* transform: rotate(.75turn); */
+    /* transform: rotate(-45deg); */
+    /* transform: translate(-100px,-100px); */
+    /* transform: skewy(0.1turn); */
+    transform: skew(10deg);
+    transform: matrix(1, 0.2679, 0, 1, 20, 20);
+    /* 0.2679 = 15deg, it is tan ....read more */
+    transform-origin: 0% 50%;
+    transform: rotate(20deg); /*use devtool to change the degree to see the origin. for more info (transform-origin illustration .codepen */
+}
+.parent .origin {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 50%;
+    left: 0%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 1;
+    /* this dot is to show the origin only */
+}
+  
+
+  .image {
+    overflow: hidden;
+    width: 720px;
+    height: 350px;
+  }
+
+  .image img {
+    transition: .5s;
+  }
+
+img:hover {
+    transform: scale(1.3) rotate(25deg);
+    opacity: 0.7;
+/*Used in websites*/    
+  }
+
+
+  h2 {
+    position: relative;
+    color: white;
+    margin: 20px auto;
+    width: fit-content;
+    padding: 20px;
+
+  }
+h2::before {
+    content: "";
+    background-color: red;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; 
+    transform: skewX(10deg);/*this is used in websites*/
+    /*what use brackets are functions .if we used the previous line in the h2 , the whole 
+    text would move so... you can add padding to the h2 to ....*/
+}
+

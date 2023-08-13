@@ -1,0 +1,67 @@
+/* 
+--Grid
+--Parent 
+---display: grid | inline-grid(if you want to inline)
+---grid-template-columns => [Number of columns In] => [Px, %, Auto, Fraction, Repeat(), Mix]
+----it is about how many columns and their width
+------auto => the remaining divide equally, it is shy
+------fr=> the remaining divide equally ,it is greedy
+--- grid-template-rows: [Number Of Rows In] => [Px, %, Auto, Fraction, Repeat, Mix]
+--- gap: [Row Gap] [Column Gap] / each alone
+--- justify-content
+------in flex to do space b/n or the others you need to give each element width for the browser to know w'h will fall when you do flexwrap and after flex wrab you do space w'h is in grid nothing is needed
+-auto auto auto doesn't necessarily means it fill all the left (actually this happens when there is no justify/align...positions unlike 'fr' w'h mayfre8)
+--- align-content
+--By Me
+-the div are arranged in the columns (in each column one div from left to right) so there may be unfilled row
+-the rows are added as neeeded by themselves even if you set them
+-grid-template row and column is about the invisibe lines and the elements are set inside them based on their arrangment in html from left to right until the upper row fill then to the next
+-if the parent is grid then if the child have no height set they will equally divide the height of the parent and by arranged in row (ofcourse the children are block elements)                                         
+-grid-template =[grid-template-rows] [grid-template-columns]
+see the last assignment of grid when i gave each row 'auto' there was d/ce in height based on the content.
+
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+.parent {
+    margin: 20px auto;
+    width: 800px;
+    height: 500px;
+    background-color: #eee;
+    display: grid;
+    /* grid-template-columns: 100px 200px 100px; */
+    /* grid-template-columns: 50% 200px 25%; */
+    /* grid-template-columns: auto auto auto; */
+    /* grid-template-columns: 200px 100px 25% auto; */
+    /* grid-template-columns: repeat(3,200px); */
+    /* grid-template-columns: 100px repeat(3,50px) 20% repeat(2,auto); */
+    /* grid-template-columns: 1fr 2fr 200px; */
+    /* grid-template-columns: auto auto 1fr 1fr; */
+    /* the auto took what is enough for its content only but the remaining is
+    taken by the fr */
+    /* grid-template-columns: repeat(4,1fr); */
+    /* grid-template-rows: 200px auto 1fr 100px; */
+    /* grid-template-rows: repeat(3, 1fr); */
+    row-gap: 10px;
+    column-gap: 10px;
+    gap: 10px 20px;
+    grid-template-columns: repeat(4,auto);
+    grid-template-rows: repeat(3,auto);
+    justify-content: space-between;
+    align-content: space-between;
+    /* the above two line made something very amazing it was an exam (doing it by another
+    method is hard */
+
+}
+
+.parent div {
+    background-color: red;
+    color: white;
+    padding: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}

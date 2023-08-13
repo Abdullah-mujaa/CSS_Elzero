@@ -1,0 +1,107 @@
+/* Assign-01 */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.ass-01 div {
+    width: 300px;
+    height: 60px;
+    margin: 10px auto;
+    background-color: #eee;
+    text-align: center;
+    line-height: 60px;
+}
+
+.ass-01 div:empty {
+    background-color: red;
+}
+
+hr {
+    margin:20px 0;
+}
+/* Assign-02 */
+.ass-02 div {
+    background-color: #ddd;
+    margin: auto;
+    padding: 20px;
+    position: relative;
+    width: 60%;
+}
+
+.ass-02 div::before {
+    content: "1";
+    background-color: red;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    height: 80%;
+    width: 20px;
+    line-height: 46px;
+    position: absolute;
+    left: -10px;
+    top: 10%;
+}
+
+.ass-02 div::after {
+    content: "";
+    height: 100%;
+    width: 10px;
+    background-color: #ddd;
+    position: absolute;
+    left: 20px;
+    top: 0;
+}
+
+/* Assign-03 */
+.ass-03 p {
+    background-color: #eee;
+    padding: 20px;
+    border-left: 5px solid #e91e63;
+    width: 60%;
+    position: relative;
+    margin: 10px auto;
+}
+
+.ass-03 p::after {
+    content: "";
+    border: 10px solid transparent;
+    border-right-color: #e91e63;
+    position: absolute;
+    left: -24.29px;
+    top: 50%;
+    margin-top: -9.715px;
+}
+
+.ass-03 p:before {
+    content: attr(data-person);
+    background-color: inherit;
+    position: absolute;
+    left: -93px;
+    top: 50%;
+    margin-top: -19px;
+    padding: 10px;
+}
+
+/* Assign-04 */
+.ass-04 p {
+    background-color: #eee;
+    padding: 20px;
+    border-right: 5px solid #f44336;
+    width: 60%;
+    position: relative;
+    margin: 10px auto;
+    counter-increment: members;
+}
+
+.ass-04 p::before {
+    content: counter(members);
+    background-color: #f44336;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    line-height: 58.29px;
+    position: absolute;
+    left: -38.46px;
+    top: 0px;
+    height: 100%;
+    width: 10%;
+}

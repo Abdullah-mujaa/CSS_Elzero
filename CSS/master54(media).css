@@ -1,0 +1,53 @@
+/*
+Responsive Design => it is about your page responses to d/t screens
+Media Queries=> shroo6(to the screen),
+/* syntax 
+  @media condition {
+    block of code
+  }*/
+*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+  }
+  .parent {
+    display: flex;
+    width: 1200px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 20px auto;
+  }
+  .parent > div {
+    background-color: red;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    width: 290px;
+  }
+  
+  @media print {
+    .parent > div{
+        font-size: 100px;
+    }
+    .parent > div:first-child {
+        display: none;
+    }
+  } /*to see the effect 'ctrl + P'
+  use case when you print and don't want to print all the stuffs*/
+
+  @media (max-width: 1000px) {
+    .parent > div {
+        background-color: blue;
+    } /*from 0 to these width apply this*/
+  }
+  @media (min-width: 1400px) {
+    .parent > div {
+        background-color: purple;
+    } /*from 1400  apply this*/
+  }
+  @media (min-width: 1100px) and (max-width: 1300px) {
+    .parent > div {
+        background-color: green;
+    }
+  }

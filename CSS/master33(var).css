@@ -1,0 +1,44 @@
+/* 
+--CSS variables
+--Global Variable => recognized by all selectors unlike local
+--Local Variable
+--var(Variable Name , Fallback Value)
+:root(is the html)
+Uses: you can go to devtools and change the root only and see the effect in all 
+        you can add to it or substract.
+*/
+/* the syntax is as follows (var naming is case senstive)*/
+:root {
+    --maincolor: blue;
+    --mainpadding: 20px;
+}
+
+
+.main {
+    background-color: var(--maincolor , black);
+    color: white;
+    padding: calc(20px + var(--mainpadding) );
+}
+
+h2 {
+    color: var(--maincolor);
+    background-color: #eee;
+    padding: var(--mainpadding);
+}
+
+p {
+    color: var(--maincolor);
+    border: 2px solid var(--maincolor) ;
+    padding: var(--mainpadding);
+}
+
+a:hover {
+    color: var(--maincolor);
+}
+
+.local {
+    --maincolor: black; /* this is local ,once it is unavailbe the class takes the global */
+    background-color: var(--maincolor);
+    color:wheat;
+}
+

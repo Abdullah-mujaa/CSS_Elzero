@@ -1,0 +1,55 @@
+/* 
+--Float(unusual)
+--Clear
+-----To make the four elements side by side we made them inline-block then gave each 25% but they didn't go side by side this is b/c
+       inline-block automatically add margins(w'h is one of the reasons for not being recommeded in positioning elments)
+       so we use float
+--float:left => b/c it is eng, when we used it there was only left '20px' height of the parent this b/c 'float'
+go beyound the workflow so we "overflow:hidden" (by this we returned the height + the next line won't come beside it)
+the downside: if there is pop up menu it will be cut.
+*Another solution for the above two things is specifing height
+downside : if the content of child div go beyoud the height they will go down (out of the parent) and .... the design so the solution:
+--Clear: if we add div(clear) after the parent, the paragraph won't come beside them but the height of the parent is 
+still unfixed so we put the div inside the parent(but change it to another block element(e.g p) to not float it with the others
+*/
+
+/* .parent {
+    background-color: red;
+    padding: 10px;
+} */
+
+.clear {
+    clear: both;
+}
+.parent div{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    background-color: #eee;
+    /* width: calc(95% / 4);
+    margin-left: 1%; */
+    width: calc((100% - 75px) / 4);
+    float: left;
+    margin-left: 15px;
+    
+} 
+ 
+body {
+    margin: 0;
+}
+
+
+/* 
+============Calc=========================
+--Content width is: 100%
+--5 Spaces 1% * 5 => 5% from content width (after all get margin-left =1% there will be left 1% w'h will be like margin-right to the last box
+--95% avaiable space
+--4 elements the width is :95% / 4 
+space b/n = elements - 1 , space before and after = elements + 1
+--use calc instead of all the above process
+--How about using px(fixed space) instead of %(w'h changes with change in the width)
+--Content width is: 100%
+--5 Spaces 15px * 5 => 75px from content width 
+--100% - 75px avaiable space
+--4 elements the width is : (100% - 75px) / 4
+*/

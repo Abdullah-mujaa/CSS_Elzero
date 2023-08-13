@@ -1,0 +1,572 @@
+/* .my-p {
+    color: red;
+    font-size: 40px;
+} */
+
+/* p {
+    color: red;
+} */
+
+/* div {
+    height: 2000px;
+    background-color: red;
+    background-color: rgb(0 0 0 / 50%);
+    background-color: #00ff00;
+    background-image: url(../imgs/learn-programming.png);
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: left top;
+    background-size: auto;
+} */
+
+/* div {
+    background-color: #DDD; */
+  
+    /* Top Right Bottom Left */
+    /* 10px 10px 10px 10px */
+    /* padding: 10px; */
+  
+    /* Top Right Bottom Left */
+    /* 10px 20px 10px 20px */
+    /* padding: 10px 20px; */
+  
+    /* Top Right Bottom Left */
+    /* 10px 20px 15px 20px */
+    /* padding: 10px 20px 15px; */
+  
+  /*   padding-bottom: 10px;
+    padding-top: 10px; */
+  /*   padding: 10px 10px 10px 10px;
+    padding: 10px;
+    padding: 10px 20px;
+    padding: 10px 15px 20px; */
+    /* padding-top: 10px;
+    padding-bottom: 10px;
+  } */
+
+/* div {
+    padding: 10px;
+    background-color: #ddd;
+    width: 70%;
+    margin-inline: 15% ;
+} */
+/* 
+div {
+  background-color: #ddd;
+  padding: 10px;
+  width: 70%;
+  margin: auto;
+  border-width: 10px 20px;
+  border-style: dashed solid dotted;
+  border-color: red green blue ;
+  border: 10px solid blueviolet;
+  outline: 10px solid red;
+} */
+
+/* div {
+    background-color: #CCC;
+    padding: 30px;
+    margin: 20px;
+    width: 200px;
+    height: 30px;
+} */
+
+/* span {
+  background-color: #ccc;
+  width: 300px;
+  height: 40px;
+  margin-top: 20px;
+  margin-left: 10x;
+  padding: 10px;
+} */
+
+/* span {
+  background-color: #ccc;
+  display: inline-block;
+  width: 25%;
+  height: 40px;
+  padding: 10px;
+  margin: 10px;
+} */
+
+/* div {
+  background-color: red;
+  margin-block: 10px;
+}
+
+.first {
+  visibility: visible;
+} */
+/* 
+.one,
+.two,
+.three,
+.four,
+.my-p {
+  margin: 10px 0px;
+  background-color: #ccc;
+  padding: 10px;
+}
+
+.one {
+  color: red;
+  border-bottom: 2px solid red;
+}
+
+.two {
+  color: green;
+  border-bottom: 2px solid green;
+}
+
+.three {
+  color: blue;
+  border-bottom: 2px solid blue;
+}
+
+.four {
+  color: black;
+  border-bottom: 2px solid black; 
+  }*/
+
+/* div {
+  padding: 10px;
+  background-color: red;
+  width: fit-content;
+  display: inline-block;
+  width: 400px;
+} */
+/* 
+div {
+  width: 150px;
+  height: 150px;
+  background-color: #CCc;
+  margin: 20px auto;
+  overflow: auto;
+} */
+
+/* div {
+  background-color: #ddd;
+  color: blue;
+  text-shadow: 1px 1px 1px red;
+  text-align: center;
+  direction: ltr;
+}
+
+img {
+  vertical-align: top;
+} */
+
+/* a {
+  text-decoration: none;
+} */
+/* div {
+  background-color: #eeee;
+  text-decoration: none;
+  text-transform: Capitalize;
+  letter-spacing: 0px;
+  text-indent: 100px;
+  word-spacing: 1.7px;
+  white-space: normal;
+  width: 400px;
+  word-break: break-word;
+} */
+
+/* div {
+  background-color: #eee;
+  width: 200px;
+  text-transform: capitalize;
+  white-space: nowrap;
+  overflow:hidden;
+  text-overflow: ellipsis;
+}
+
+div:hover {
+  overflow: visible;
+} */
+
+/* div {
+  background-color: #ddd;
+  text-align: center;
+  font-size: 20px;
+  padding: 20px;
+  border: medium solid blue;
+}*/
+
+/* .with-ser {
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.san-ser {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.google-fonts {font-family: 'Rajdhani', sans-serif;
+  font-family: 'Smokum', cursive;}
+.google-fonts,
+.san-ser,
+.with-ser {
+  padding: 10px;
+  background-color: #ddd;
+} */
+
+/* body {
+  font-size: 40px;
+}
+
+div {
+  font-size: 20px;
+}
+
+div span {
+  font-size: 1em;
+} */
+
+/* div {
+  font-style: italic;
+}
+
+p {
+  font-variant: small-caps;
+}
+
+h1 {
+  font-weight: normal;
+} */
+
+/* button {
+  cursor: pointer;
+}
+
+span {
+  cursor: crosshair;
+} */
+
+/* .parent {
+  padding: 10px;
+  background-color: red;
+  width: 1000px;
+}
+
+body {
+  margin: 0px;
+}
+
+.parent div {
+  background-color: #ddd;
+  padding-block: 10px;
+  text-align: center;
+  width: 25%;
+  /* width: calc((100% - (15px*5)) / 4 ); */ 
+  /* float: left; */
+  /* /* margin-left: 15px; */
+/* }
+
+.clear {
+  clear: both;
+} */ 
+
+/* .one {
+  background-color: red;
+  opacity: 0.1;
+  margin-bottom: 10px;
+}
+
+.two {
+  background-color: rgb(255, 0, 0, .1);
+} */
+
+/* div {
+  color: white;
+  width: 100px;
+  padding: 10px;
+  background-color: red;
+}
+.one {
+  background-color: red;
+  
+}
+.two {
+  background-color: green;
+}
+
+.parent {
+  width: 600px;
+  height: 400px;
+  background-color: #aaa;
+} */
+
+/* div {
+  color: white;
+  width: 100px;
+  padding: 10px;
+  text-align: center;
+  position: absolute;
+}
+.one {
+  background-color: red;
+  left: 20px;
+  top: 20px;
+  z-index: 0;
+}
+.two {
+  background-color: green;
+  left: 15px;
+  top: 15px;
+  z-index: 0;
+}
+.three {
+  background-color: blue;
+  z-index: 0;
+} */
+
+/* ul {
+  list-style-type: loarmenianwer-;
+}
+li {
+  background-color: #EEE;
+  margin-bottom: 20px;
+} */
+
+/* body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+table {
+  width: 100%;
+  border: 1px solid #eee;
+  border-spacing: 0px;
+}
+
+table td {
+  padding: 10px;
+  background-color: #ccc;
+  border: 1px solid #e2e2e2;
+}
+
+table thead td {
+  background-color: red;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  border-color: red;
+} */
+
+/* .one {
+  background-color: red;
+  color: white;
+}
+
+.two {
+  background-color: #eee;
+  width: 100px;
+  height: 100px;
+}
+
+a {
+  color: green;
+  text-decoration: none;
+}
+
+a:hover {
+  color: red;
+}
+
+.ch:checked {
+  display: none;
+}
+
+a:visited {
+  color: blueviolet;
+}
+
+a:active {
+  background-color: black;
+}
+
+:empty {
+  border: 1px solid red;
+}
+
+input:focus {
+  border: 2px solid purple;
+  outline: none;
+} */
+
+/* .one-1 span {
+  display: inline-block ;
+  background-color: red;
+  font-size: 2em;
+  font-weight: bold;
+  color: white;
+}
+
+.two-2::first-letter {
+  display: inline-block ;
+  background-color: red;
+  font-size: 2em;
+  font-weight: bold;
+  color: white;
+}
+
+.three-3::first-line {
+  color: green;
+}
+
+.four-4{color: red;
+background-color: black;}
+.four-4::selection{
+  color: red;
+  background-color: black;
+} */
+/* .parent {
+  margin-bottom: 20px;
+  overflow: hidden;
+  counter-increment: members-counter;
+}
+.one-01{
+  background-color: #eee;
+  padding: 10px;
+  width: 600px;
+  float: left;
+  position:relative;
+} */
+/*  
+
+.user {
+  background-color: #eee;
+  padding: 10px;
+  width: 50px;
+  height: 55.5px;
+  margin-right: 20px;
+  font-size: 50px;
+  text-align: center;
+  float: left;
+}
+
+hr {
+  margin: 20px 0;
+}
+
+.one-01::after{
+  content: "";
+  width: 5px;
+  height: 100%;
+  background-color: #10a372;
+  position: absolute;
+  right: -10px;
+  top: 0px;
+}
+
+span {
+  width: 5px;
+  height: 100%;
+  background-color: #10a372;
+  position: absolute;
+  right: -10px;
+  top: 0px;
+}
+
+.one-01::before {
+  content: "Hi";
+  color: purple;
+}
+
+.one-01::before {
+  content: "";
+  background-color: #ee;
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border: 10px solid;
+  border-color: transparent green transparent transparent;
+  left: -20px;
+  top: 50%;
+  margin-top: -10px;
+} */
+
+/* ul {
+  list-style: none;
+}
+
+ul li{
+  position: relative;
+  padding-left: 10px;
+}
+
+ul li::before {
+  content: "";
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  margin-top: -10px;
+  border-width: 10px;
+  border-style: solid;
+  border-color:transparent green transparent transparent ;
+  width: 0;
+  height: 0;
+  
+} */
+
+/* .one-01::before{
+  content: "attr(data-text)";
+  display: none;
+  background-color: blue;
+}
+
+.one-01:hover::before{
+  display: block; }*/
+
+/* .one-01::before {
+    content: attr(data-text);
+    display: none;
+    background-color: royalblue;
+} */
+
+
+
+/* .one-01::after {
+
+  content: counter(members-counter);
+  background-color: red;
+  color: white;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  right: -10px;
+  margin-top: -10px;
+  height: 20px;
+  width: 20px;
+} */
+/* .one {
+  height: 150px;
+  width: 150px;
+  background-color: red;
+  border-radius: 6px 10px;
+  border-top-left-radius: 10 40;
+  margin: 20px auto;
+} */
+
+/* div {
+
+  padding: 20px;
+  background-color: #eee;
+  margin: 20px auto;
+  width: 300px;
+  box-shadow: 
+  0px 0px 0px 0px red,
+  0.2px 0.3px 0.5px 0.2px yellow,
+  2px 1px 1px 1px blue;
+} */
+
+.parent {
+  width: 600px;
+  background-color: #ddd;
+  padding: 10px;
+  overflow: hidden;
+  margin: 20px auto;
+}
+
+.one {
+  background-color: #eee;
+  width: 300px;
+  float: left;
+}

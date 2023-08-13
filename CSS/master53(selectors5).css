@@ -1,0 +1,45 @@
+/*
+  CSS Selectors
+  - :root , we have seen it in variables
+  - :checked, 
+  - :empty
+  - :disabled
+  - :required
+  - :focus
+  - ::selection
+  - ::placeholder
+*/
+/* 
+input[type="checkbox"]:checked + label {
+    color: red;
+}  very smart w'hever checked will have it */
+
+div:empty {
+    background-color: red;
+    width: 100px;
+    height: 100px;
+}
+
+input:disabled {
+    color: red;
+} /*targets input that are disbled*/
+
+input:required + span {
+    color: red;
+} /*You can also make the star by before and after (css only)*/
+
+input:required + span::before {
+    content: "*";
+    color: red;
+}
+input:focus {
+    border: 2px solid red;
+    outline: none;
+}
+div::selection {
+    background-color: black;
+    color: white;
+}
+::placeholder {
+    color: red;
+}

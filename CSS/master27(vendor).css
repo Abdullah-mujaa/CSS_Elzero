@@ -1,0 +1,34 @@
+/* 
+---Vendors Prefixes
+
+--Chrome
+--Safari
+--Firefox.....
+
+--[1] New CSS feature Appeared
+--[2] Browsers tests the feature in version x
+--[3] Browsers add prefix to give developers the ability to use it
+--[4] The feature is fully supported in version y(after x) , no need for prefix
+
+-- -webkit- => Chrome, Safari, New Opera Version
+-- -moz- => Firefox
+-- -ms- => IE, Edge
+-- -o- => Old versions of Opera
+-the above four prefixes is when it is in the test-period
+how to check 'https://caniuse.com/?search=blend-mode;
+*/
+
+.class {
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
+}
+
+/* 
+You won't need the above hard work
+[1] Most of users is using modern browsers
+[2] Vs Code addon to add the prefix(e.g css-auto-prefix)
+[3] Task Runner 
+*/

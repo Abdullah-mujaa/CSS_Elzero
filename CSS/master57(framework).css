@@ -1,0 +1,60 @@
+/*
+  Create Your Framework
+*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+  }
+  .parent {
+    position: relative;
+    background-color: #eee;
+    margin: 20px auto;
+    width: 1200px;
+    height: 200px;
+  }
+  .parent div {
+    background-color: green;
+    color: white;
+    /* position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%); */
+  }
+  .product {
+    background-color: red;
+    color: white;
+    /* position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%); */
+  }
+
+.center-position {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    /* So you don't need to repeat these positioning in each element */
+}
+
+.circle-100 {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.circle-200 {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.center-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* The adv of framework is u will not repeat the repeatable actions over and over again
+- to change all the elements feature will only change the class and all will change
+ */

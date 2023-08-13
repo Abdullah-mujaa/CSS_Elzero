@@ -1,0 +1,5 @@
+/* to make these 'css' apply only in print write inside the link 'media="print"' */
+.parent > div {
+    font-size: 100px;
+    color: black;
+}

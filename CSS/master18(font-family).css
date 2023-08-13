@@ -1,0 +1,32 @@
+/* 
+ 
+--CSS Units
+---px => fixed size
+---em => Time(1em = 1 time)(it is not necessarly integer)
+---rem => Root Time (same as em but it takes the factor from the root (w'h is the html(16px default))
+---percentage => %(parent font-size) (can be>100%)
+---vw  => View Port Width (View Port is the whole width and height of the page)
+        5vw => 5%(width of the page) so it will be very responsive b/c as width of the page changes so that the
+        the font size
+        We have been checking by setting (em,rem...) and writing below it a line by px to check 
+--Read
+---vmin
+---vh
+
+--1em = 16px This is Wrong
+---Xem is X times the font-size of the parent(w'h is bydefault inherited)
+--Default Font Size For Web Page Is 16px
+
+*/
+
+body {
+    font-size: 40px;
+}
+
+div {
+    font-size: 5vw;
+}
+
+div span {
+    font-size: 1em;
+}

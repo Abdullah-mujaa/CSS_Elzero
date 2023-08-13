@@ -1,0 +1,60 @@
+/* 
+-3D transform
+--Translate: similar , translate3d(x,y,z)
+--Perspective: is the like the space b/n me and the element(more px more length), to activate the 3D these property is necessary.
+-------#19Css_elzero: for eg. prespective = 600px; if you do translateZ(590px) it can see it but if you do 600px i won't cause there is no space to see it, you can set similar image at different prespective and similar translateZ to see the d/ce
+--Perspective Origin :(from where i am watching)similar to transform-origin, it can be in css units or keywords .default( center,center), it can't work without prescpective,also called vanishing point when perepective= z
+in the eg. we set x & y to '0' and changing 'z' value .
+----The perspective-origin property defines at from which position the user is looking at the 3D-positioned element.
+----When defining the perspective-origin property for an element, it is the CHILD elements that will get the effect, NOT the element itself.
+*/
+
+.shape {
+    perspective: 300px;
+    perspective-origin: left top;
+    background-color: #eee;
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+
+  }
+  .shape div {
+    margin: 5%;
+    width: 90%;
+    height: 90%;
+    background-color: rgb(255 0 0 / 39%);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 30px;
+    transition: .5s;
+    /* transform: translate(100px, -100px);
+    transform: translateX(100px);
+    transform: translateZ(100px);
+    transform: translate3d(0, 0, 100px); */
+  }
+  img {
+    position: relative;
+    z-index: 1;
+    width: 40vw;
+    height: 30vh;
+    margin-bottom: 20px;
+    transform: translateZ(20px);
+}
+
+.one {
+    perspective: 100px;
+}
+
+.two {
+    perspective: 50px;
+}
+
+.three {
+    perspective: 600px;
+}

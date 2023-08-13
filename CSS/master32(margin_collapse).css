@@ -1,0 +1,50 @@
+/* 
+--The Margin Collapse
+--[1] Only vertical margin collapse
+--[2] Bigger Margin Wins (in vertical)
+--[3] Collapse happen when no element is in b/n
+--[4] Nesting doesn't prevent collapse 
+-------------these means child's margin will be parent's too in the f.f conditions:No other elements in-between (see earlier rule, about the <br>).
+The parent element doesn't have a height set.
+The parent element doesn't have any padding or border along the relevant edge. That last condition is really common, so let's look at a quick example. In this case, our nested child can't combine margin with the next paragraph, because the parent has some padding in the way.(https://dev.to/topcode007/nesting-doesnt-prevent-collapsing-5h96)
+*/ 
+
+.parent {
+    overflow: hidden;
+    margin: auto;
+    width: 400px;
+    height: 200px;
+    padding: 10px;
+    background-color: #eee;
+}
+
+.parent .one,
+.parent .two {
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+
+.parent .one {
+    background-color: #aaa;
+}
+
+.parent .two .up {
+    background-color: red;
+    color: white;
+    /* height: 100px; */
+    /* height: 90px; */
+    /* margin-bottom: 20px; */
+    margin-bottom: 40px;
+    height: 80px;
+}
+
+.parent .two .down {
+    background-color: green;
+    color: white;
+    /* height: 100px; */
+    /* height: 90px; */
+    height: 80px;
+    margin-top: 20px;
+}
+

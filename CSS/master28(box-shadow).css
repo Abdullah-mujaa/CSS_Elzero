@@ -1,0 +1,37 @@
+
+.one {
+    width: 150px;
+    height: 150px;
+    background-color: red;
+    margin: 20px auto;
+    /*border-radius:;
+    0isdefault===tomaketheelementcirclegiveitborder-radiushalfofwidth&height(75px)*//*border-radius: 50%/25% ;  outline: 2px solid black;*/    /*border-radius: 6px;
+    *//*border-top-left-radius: 20px 10px;
+    border-bottom-right-radius: 20px ;
+    *//*itisusedinbuttonsandcards*/
+    /* -webkit-border-radius: 50%;
+    -moz-border-radius: 50% ;
+    -ms-border-radius: 50% ;
+    -o-border-radius: 50% ;
+    -webkit-border-radius: 50% ; */
+}
+/* 
+H-Shadow | V-Shadow | Blur | Spread | Color | Inset
+*/
+/* =====box-shadow(often)===== */
+
+.two {
+    padding: 20px;
+    background-color: #eee;
+    margin: 20px auto;
+    width: 300px;
+    /* box-shadow: 0 0 0 0 #ddd inset; use the dev tool */
+    /* the following is multiple shadows */
+    box-shadow: 
+        0 0 10px 0 #f00,
+        0 0 10px 0 #000,
+        0 0 10px 0 #080,
+        0 0 10px 0 #00f,
+        0 0 10px 0 yellow;
+
+}

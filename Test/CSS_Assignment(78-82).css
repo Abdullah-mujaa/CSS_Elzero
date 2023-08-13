@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+/* Assign-01 */
+.ass-01 div.main.red {
+    color: red;
+}
+/* Assign-02 */
+.ass-02 div div:nth-child(2) {
+    color: red;
+}
+/* Assign-03 */
+.ass-03 div.baby:only-child {
+    color: red;
+}
+/* Assign-04 */
+.ass-04 [title]:not(.parent div,.no-need){
+    color: red;
+}
+/* Assign-05 made very easier by Mo-galal*/
+.ass-05 div[title]:last-child:not(.no-need div,.no-need) {
+    color: red;
+}
+/* Assign-06 */
+.ass-06 div:nth-last-of-type(2):not(.no-need div) {
+    color: red;
+}
+/* Assign-07 made very easier by Mo-galal :he did consider the parent divs as childern of the body w'h i didn't consider*/
+/* .ass-07 :not(no-need div,.no-need). {
+    color: red;
+} */
+.ass-07 div h3+div:nth-last-of-type(2):not(.no-need,.no-need div,.no-need-2 div) {
+    color: red;
+}
+/* Assign-08 Mo-Galal is better and i think mine is not considered as a single line*/
+.ass-08 div:nth-child(2),.ass-08 div:nth-child(3),.ass-08 p {
+    color: red;
+} 
+/* the next is taken from Mo-galal with ta3del */
+.ass-08 :not(:first-child):not(:last-child):not(h3) {
+    color: red;
+}

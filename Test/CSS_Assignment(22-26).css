@@ -1,0 +1,67 @@
+/* Assign-01 */
+.ass-01 .one,
+.ass-01 .two {
+    padding: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.ass-01 .one {
+    border: 2px solid red;
+}
+
+.ass-01 .two {
+    border: 2px solid green;
+}
+
+.ass-01 .one p,
+.ass-01 .two p {
+    padding: inherit;
+    border: inherit;
+    background-color: #ddd;
+}
+
+/* Assign-02 */
+
+.ass-02 p {
+    text-align: center;
+}
+
+.ass-02 .one {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.ass-02 .two {
+    font-family: Cairo, sans-serif;
+    font-weight: 700;
+}
+
+.ass-02 .three {
+    font-family: 'Jomhuria', cursive;
+    font-weight: 400;
+}
+
+/* Assign-03 */
+
+html {
+    font-size: 20px;
+}
+
+.ass-03 div {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.ass-03 .one-01 {
+    font-size: 2.5rem;
+}
+
+.ass-03 .two-01 {
+    font-size: 2rem;
+}
+
+.ass-03 .three-01 {
+    font-size: 1.5rem;
+}

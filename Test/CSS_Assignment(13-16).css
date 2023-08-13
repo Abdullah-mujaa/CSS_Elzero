@@ -1,0 +1,33 @@
+/* Assign-01 */
+.ass-01 .parent .child .title {
+    color: red;
+}
+
+.ass-01 .parent .title {
+    color: blue;
+}
+
+.ass-01 .parent p {
+    color: green;
+}
+
+.ass-01 .title {
+    color: green;
+}
+
+.ass-01 .parent p,
+.title {
+    color: green;
+}
+
+/* Assign-02 */
+.ass-02 div {
+    background-color: brown ;
+    padding: 10px;
+    width: fit-content;
+    max-width: 400px;
+    height: 20px;
+    color: white;
+    margin-bottom: 10px;
+    overflow: hidden;
+}

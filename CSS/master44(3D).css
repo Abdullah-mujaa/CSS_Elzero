@@ -1,0 +1,23 @@
+div {
+    margin: 200px auto;
+    width: 200px;
+    height: 200px;
+    background-color: rgb(255 0 0 / 39%);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 30px;
+    /* transform: rotateX(50deg); */
+    /* transform: rotateY(50deg); */
+    /* transform: rotateZ(50deg); this line alone will be like rotate() so it should be with the others in the next line */
+    transform: rotate3d(0, 1, 1, 65deg);  /* X,Y,Z are b/n '0-1'(i think it goes to '2') and the last is the degree(+ve=clockwise) */
+   transform: rotatey(90deg);
+   transform-origin: initial; 
+   transform: rotatex(60deg) rotatey(40deg);
+   transform-origin: center bottom ; /*this line is to specify from where to start*/
+   transition: .5s;
+}
+
+/* I dont think these lesson is on 3d that much b/c we i see the z is just for rotating in 360deg */

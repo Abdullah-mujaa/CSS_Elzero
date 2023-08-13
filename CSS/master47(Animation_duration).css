@@ -1,0 +1,56 @@
+/*
+  Animation
+  - KeyFrames
+  - Name
+  - Duration
+*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+  }
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  div {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    transform: translate(-50%, -50%);
+    animation-name: change-colour ; /*these line can be given to d/t elements*/
+    animation-duration: 3s; /*this duration is spread based on the % the colors(e.g) have the more % b/n the more duration stays there*/
+  }
+
+@keyframes change-colour {
+    /* from {
+        background-color: red;
+    }
+    to {
+        background-color: blue;
+    } similar to the below */
+    /* 0% {
+        background-color: red;
+    }
+    100% {
+        background-color: blue;
+    } */
+    0% {
+        background-color: red;
+    }
+    75% {
+        background-color: black;
+    }
+    80% {
+        background-color: blue;
+    }
+    100% {
+        background-color: red;
+    } 
+}

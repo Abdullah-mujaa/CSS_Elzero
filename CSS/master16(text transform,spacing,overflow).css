@@ -1,0 +1,64 @@
+/* 
+--text-decoration
+----underline,overline,line-through,none(used for links)
+--text-transform
+----uppercase,lowercase,capitalize(1st letter)
+----It is better to not capitalise by your self in the html rather leave it for
+        the CSS(in everything leave it for the CSS)
+*/
+
+div {
+    /* text-decoration: line-through ; */
+    /* background-color: #f9f9f9; */
+    /* text-transform: uppercase; */
+
+}
+
+/* ============================ */
+/* 
+-Text Spacing
+--Letter Spacing(unusual) => can be -ve 
+--Indentation(unusual)=>Specifies the indentation applied to lines of inline content in a block. The indentation only affects the first line
+---------------used in writing code where each  line of code have equal space before them(it is better than using margin for these purpose)
+--Line Height => this is the vertical distance b/n the lines (1=100%) , the best is 1.7/1.66
+--Word Spacing(unusual) + Wraping + White Space
+--white-space:normal => that means when it reach to the specified width (it find next to it white-space) it goes down
+-----------------------nowrap(semantic) => it makes it go beyound the width(it is used when title goes beyond width and you don't
+-----------------------so you put(.....) and when the user hovers it appears for him
+--word-break: break-word; for long single words (there is break all w'h break even short words)=> this makes link break don't go beyond(it is used when title goes beyond width and you don't want it go horiz
+-----------------------break it(single long word is the one w'h hori overflow.)
+ */
+
+div {
+    /* letter-spacing: 2px; */
+    /* text-indent: 100px; */
+    /* word-spacing: 1px; */
+    /* width: 300px;
+    word-break: break-word; */
+}
+
+/* ===================== */
+
+/* 
+--text-overflow
+----it is for text only . use case is as follow
+--------white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;(it puts (...) to show sth is left (or for the user if he is 
+                                writing above the given space so leave him writing but also don't make the text 
+                                go beyond the limit.To show the user use 'div:hover {overflow: visible;}'/or by 'title'
+                                in html(and many other ways)
+*/
+div {
+    text-transform: capitalize;
+    background-color: #ddd;
+    padding: 10px;
+    width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+div:hover {
+    overflow: visible;
+}
+

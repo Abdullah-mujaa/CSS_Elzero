@@ -1,0 +1,40 @@
+/* 
+..Block
+..
+...Take Full Width if no width
+...Add Line Break
+...Respect Padding, Margin, Width, Height
+
+..Inline
+..
+...Do not Respect Width and Height
+...Respect Padding and Margin( Just Left + Right ) ,inline padding and inline margin
+...Do not Add Line Break
+
+..Inline-Block
+..
+... allow elements before and after it
+... Respect Padding, Margin, Width, Height
+...the width is to the size of the text if not set
+*/
+
+span {
+    background-color: #CCC;
+    /* padding: 30px;i think this is better 'padding: 0 30px;' */
+    /* margin: 20px; You can see in the dev tool that there is no orange color from above and bottom althought margin is set */
+    
+}
+
+/* div {
+    background-color: #CCC;
+    padding: 30px;
+    margin: 20px;
+    width: 200px;
+    height: 30px;
+} */
+
+span {
+    background-color: #CCC;
+    display: inline-block;
+    
+}

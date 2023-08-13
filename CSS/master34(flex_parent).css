@@ -1,0 +1,183 @@
+/* 
+--Flexible Box
+--For Parent
+---display: flex => To Start Flexible Box
+---flex-direction: row => Default Value(in row based on the page flow (ltr).once you change it to ltr it will automatically be arranged
+-----row-reverse => without changeing the dir of the page.(no need float:right) + column + column-reverse(very hard by position.....the next line start from down), the reverse is for all lines so the next line start from the right (for row-reverse)
+---flex-wrap: nowrap => default, you say 25% for each box but it overrides this 25 and mabkaket b/n the boxes(no box is wrapped (fall to next line))
+-----wrap => is the opposite(it is what would happen in the float)
+-----wrap-reverse(very hard by others)=> the teref goes up instead of down (shortly the next lines is to up rather than down)
+-----flex-flow: Flex Direction Flex Wrap; shorthand
+====================
+---justify-content: flex-start => default (the first element in the following line starts from left but with 'flex-end' it starts from right(and acoording to their order they move to the left(d/t from row-reverse)(5:37:00)
+--------------------center=> similar (5:39:00-30) (the mistake if made by float in hers is when size changes or when element is added)
+--------------------space between => divides the remaining space b/n children equally (no need like in float to substract
+the remaining and divide them b/n elments equally.....
+--------------------space around => equally before and after the childredn div
+--------------------space evenly => the space b/n the elements and before the 1st and last is equal with the 
+                             spaces b/n
+-------------Notice that when you set the direction to a reversed row or column, start and end are also reversed.                             
+---align-items(vertically move the horizontally side by side elements): stretch => Default Value (in the three elements the 1st had its own height so it stays fixed , 
+the second had greater height and the last didn't have a set height so the last strectched equal to the second 
+and also the parent stretched(b/c height is auto ofcourse (me)) (all to fit content(the parent)) w'h is d/t 
+than the float in w'h the one don't affect the other.(Notice that when the flex direction is a column, justify-content(space-x also works) changes to the vertical and align-items(also align-content) to the horizontal.)
+-------------------------------------------------------------------flex-start: from upper part of the container and flex-end is the opposite,center(semantic)                    
+---align-content(You can use align-content to set how multiple lines are spaced apart from each othe): stretch => default (stretch to fit-content, flex-start(in align-items) => makes the first line in the first line and adds space bottom then the second the line then a space in bottom(to know how spread uncheck stretch) (it is like spreading the elements in the flex box) but with the align-content the space left will be on the bottom of the two lines (sticked together)try flex-end,
+try space b/n , around , evenly (space before first line and after it and lastly space after the second line and all spaces are equal)
+'items are inside contents' shortly align-content takes the whole content and give it a place
+This can be confusing, but align-content determines the spacing between lines, while align-items determines how the items as a whole are aligned within the container. When there is only one line, align-content has no effect.
+*/
+
+
+
+
+* {
+    box-sizing: border-box;
+}
+
+.flex {
+    /* overflow: hidden; We don't need it*/
+    background-color: #eee;
+    width: 600px;
+    padding: 20px;
+    margin: 20px auto;
+    display: flex;
+    /* flex-direction: row;
+    flex-wrap: wrap; */
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    justify-content: flex-end;
+    justify-content: center;
+    justify-content: space-between;
+    justify-content: space-around;
+    justify-content: space-evenly;
+}
+
+.flex div {
+    background-color: red;
+    color:white;
+    /* float: left; We don't need it*/
+    /* width: 25%; */
+    /* width: calc(100%/3); */
+    /* width: calc(98%/3); */
+    width: calc(94%/3);
+    text-align: center;
+    padding: 20px;
+
+}
+
+.float {
+    overflow: hidden;
+    background-color: #eee;
+    width: 600px;
+    padding: 20px;
+    margin: 20px auto;
+}
+
+.float div {
+    background-color: red;
+    color:white;
+    float: left;
+    /* width: 25%; */
+    /* width: calc(100%/3); */
+    width: calc(94%/3);
+    /* to make space b/n we do the nxt line */
+    margin-left: 1%;
+    margin-right: 1%;
+    text-align: center;
+    padding: 20px;
+    
+}
+/* to make space b/n the 3 elments we do the nxt line */
+/* .two {
+    margin-left: 1px;
+    margin-right: 1px;
+}the 2nd example*/
+
+/* .float .five {
+    margin-left: 37.5%;
+    to center the teref element
+} the first example*/
+
+/* =======align====== */
+.flex-1 {
+    background-color: #eee;
+    width: 600px;
+    padding: 20px;
+    margin: 20px auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: stretch;
+  }
+
+  .flex-1 div {
+    background-color: #f00;
+    color: white;
+    width: calc(100% / 3);
+    text-align: center;
+    padding: 20px;
+  }
+
+  .flex-1 .one,
+  .float-1 .one {
+    height: 80px;
+  }
+
+  .flex-1 .two,
+  .float-1 .two {
+    height: 120px;
+  }
+
+  .float-1 {
+    overflow: hidden;
+    background-color: #eee;
+    width: 600px;
+    padding: 20px;
+    margin: 20px auto;
+  }
+
+  .float-1 div {
+    background-color: #f00;
+    color: white;
+    float: left;
+    width: calc(100% / 3);
+    text-align: center;
+    padding: 20px;
+  }
+
+  .center {
+    background-color: blue;
+    color: white;
+    width: 300px;
+    height: 200px;
+    /* traditionally to center it (where also line-height even changes with d/t fonts) */
+    /* line-height: 200px;
+    text-align: center; */
+    /* or using position w'h requires selector(span or div.............) */
+    display: flex; /*first we make the parent flexible box*/
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  /* ================align-content============ */
+.flex-2 {
+    background-color: #eee;
+    width: 600px;
+    height: 400px;
+    padding: 20px;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    /* align-items: flex-end; */
+    align-content: space-between; /*to do this you would give it position and ......so flex is flexible*/
+}
+
+.flex-2 div {
+    background-color: #f00;
+    color: white;
+    width: calc(100% / 3);
+    text-align: center;
+    padding: 20px;
+  }

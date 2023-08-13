@@ -1,0 +1,54 @@
+/* 
+--To move One to down we gave it margin-top so it moved but all the content after it moved 
+down too.
+*/
+
+/* 
+-Position
+--Static => Default (semantic no left,bottom,t,r will affect it)
+--Relative => moves independently(will not affect others(no pushing ) ,it can be above them,
+top:10px => move it from its original position from top to bottom 10px....it can be -ve(to the opposite)
+--Absolute => the element will go out of the work flow(as if it is not available),when 'one' is abs 'two' will replace it (b/c 'one' is out),but who is above is another issue(To show this we gave 'two' margin and both moved b/c 'one' didn't has r,l,t,b)
+it goes depending on the page(parent) not from it original position(bottom:0px => it will go down , 1px from the end down to up 1px)
+.for an absoute positioned element to move based  on the parent , the parent should be relative positon (otherwise it will be based on the page)
+--Fixed => it goes depending on the page(even if parent is relative positioned), similar to absolute , semantic(stays where it is) , used for the button to make you move to the beginning of the page 
+--Sticky => similar to fixed but it works once you reach (for e.g top:20px when it reach it ,it becomes fixed (used in navigation bar)
+-all these move by l,r,t,b
+there is inset => inset: 10px auto 20px; top: 20, right&left: auto, bottom:20px;
+*/
+
+body {
+    min-height: 5000px;
+}
+
+div {
+    padding: 10px;
+    width: 100px;
+    color: white;
+    background-color: red;
+    position: sticky;
+    top: 20px;
+}
+
+.one {
+    background-color: red;
+    /* position: relative; */
+    /* left: 10px;
+    bottom: 10px; */
+    /* position: absolute;
+    left: 0px; */
+    /* position: fixed;
+    right: 0px;
+    bottom: 0px; */
+}
+
+/* .two {
+    background-color: green;
+} */
+
+/* .parent {
+    width: 500px;
+    height: 100px;
+    background-color: blue;
+    position: relative;} */
+

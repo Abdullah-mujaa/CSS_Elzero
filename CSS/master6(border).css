@@ -1,0 +1,12 @@
+div {
+    background-color: #CCC;
+    padding: 10px;
+    width: 80%;
+    margin: auto;
+    /* the thickness of the border */
+    /* border-width: 10px;
+    border-color: red;s
+    border-style: solid;*/
+    /* think logically that the property have four sides to edit, border-block/inline */
+    border: 10px solid red; /*shorthand to all direction*/
+}

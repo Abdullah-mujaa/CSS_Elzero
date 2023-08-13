@@ -1,0 +1,52 @@
+/*
+  Media Queries
+  Responsive Design
+  - Mobile First : your page 1st designed in mobile size then increase sizes
+  - Test Devices
+*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+  }
+  .parent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  .parent > div {
+    padding: 20px;
+    background-color: red;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    width: 100%;
+    /* margin: 10px; rather than these use in parent     justify-content: space-evenly; */
+    margin-bottom: 5px;
+  }
+/* the above two selectors need to be written outside b/c they are shared by all screens */
+
+/* Mobile */
+@media (max-width: 767px) {
+
+}
+/* for the iphone we don't need to give the div width b/c there is only one product in one line
+so it is block (default width=100%) but when you display:flex they come side by side so give them width=100%*/
+/* if we stopped here no matter how you pull or push the window it is responsive for one product one line */
+
+/* Small Screen */
+@media (min-width: 768px) {
+    .parent > div {
+        /* width: 50%; rather than these use the next line  */
+        width: calc(50% - 10px);
+    }
+}
+
+/* Medium Screens */
+@media (min-width: 992px) {
+    .parent > div {
+        width: calc(25% - 5px);
+    }
+}
+/* in real life you will use ready containers (grid in frameworks) */

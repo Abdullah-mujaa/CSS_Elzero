@@ -1,0 +1,14 @@
+/* 
+  Text Color
+       background-color
+       color
+    Text Shadow
+    Syntax => text-shadow: H-shadow.V-shadow.Blur.Color
+*/
+
+div {
+    background-color: #f9f9f9;
+    /* color: rebeccapurple; */
+    text-shadow: 1px 1px 1px red ;
+    /* you can use dev tool shadow editor */
+} 

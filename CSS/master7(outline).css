@@ -1,0 +1,15 @@
+div {
+    background-color: #CCC;
+    width: 300px;
+    /* Padding is added to the width from the next line, we added from left and right 10px so width
+    became 320px */
+    padding: 10px;
+    /* from  from the next we added from left and right 10px so width = 340 */
+    border: 10px solid red;
+    /* 
+    but outline didn't added change to the size of the element , these adv of outline is counteracted
+    by the CSS3 feature(box-sizing) where border is not added to the size of the element.
+    Dis of outline: it can't take value for each side rather one for all
+     */
+    outline: 10px solid blue;
+}

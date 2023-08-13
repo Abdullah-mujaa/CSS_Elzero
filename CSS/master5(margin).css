@@ -1,0 +1,28 @@
+div {
+    background-color: #CCC;
+    padding: 10px;
+    /* margin: 10px; */
+    /* Unlike padding margin is out of the background so it will not change the positon
+    of the content in the background unlike padding */
+    /* margin can be negative(go opposite to the normal direction) */
+
+    /* 
+    How to center elements by margin 
+    We tried this example by block element(div) so div takes a line by itself(regardless of its
+    width.It does not control height(we can't center it vertically) so margin left and right
+        works freely(top and bottom don't for centering) with auto
+    for eg. width: 70%;
+            margin-left: 15%;
+    the div 70% of the line we push it to the right 15% and the lefting 15% will be margin-right
+    so we centered the div but if width is 80% instead it won't be centered(it will be more
+    to the right.So to shortcut the process of centering we use margin-left:auto,margin-right:auto
+    which means take the size of the div and the lefting width divide it equally b/n the right and left
+    Shortcut: margin:auto => b/c auto for top and bottom do nothing b/c we have no control
+    auto is better than setting % to center(someppl use (%) when they are sure that the width 
+    won't changes)
+
+    */
+    width: 80%;
+    margin: auto;
+}
+/* margin inline & margin block */

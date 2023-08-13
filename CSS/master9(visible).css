@@ -1,0 +1,18 @@
+div {
+    background-color: red;
+    margin: 10px 0px;
+    /* there is eg in the video when you touch the button display:none becomes cancelled
+    display: none; is commonly used with JavaScript to hide and show elements without deleting and recreating them */
+    /* display: none; */
+    /* the default is 'visibility: visible' */
+    /* visibility: visible; */
+}
+
+.first {
+    display: none;
+    /* unlike display:none visibility:hidden secures its place
+        there is eg. in the video w'h is in animation where its place is already there so
+        it appears gently
+    */
+    visibility: hidden;
+}

@@ -1,0 +1,16 @@
+/* 
+The !important declaration
+--It will override any style (even the inline)
+--Useful when editing others code 
+Unless necessary don't use it
+ne way to use !important is if you have to override a style that cannot be overridden in any other way. This could be if you are working on a Content Management System (CMS) and cannot edit the CSS code. Then you can set some custom styles to override some of the CMS styles.
+Another way to use !important is: Assume you want a special look for all buttons on a page. Here, buttons are styled with a gray background color, white text, and some padding and border:(w3schhool: ithink to oversride the more specific by less specific code)
+*/
+
+.one {
+    background-color: #eee !important;
+}
+
+.one {
+    background-color: blue; 
+}

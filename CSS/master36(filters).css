@@ -1,0 +1,21 @@
+/* 
+filters : it is not supported in some browsers so "caniuse.com"
+--greyscale => in games
+--blur
+--invert
+try the rest in vsc/devtool.
+
+*/
+
+img {
+    transition: .3s;
+    /* filter: grayscale(100%); */
+    /* filter: blur(4px); */
+    filter: invert(100%);
+}
+
+img:hover {
+    /* filter: grayscale(0); */
+    /* filter: blur(0); */
+    filter: invert(0);
+}

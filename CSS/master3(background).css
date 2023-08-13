@@ -1,0 +1,60 @@
+div {
+   /* Me: background color covers all the parts of the element */
+   /*Color Name*/
+    background-color: red;
+    /*To set rgb or hex first set the color name and then go and inspect to choose color while seeing the 
+color changes in the content*/
+    background-color: rgba(0 0 0 / 50%);
+    /* same as rgba(0,0,0,0.5) */
+    /* Red Green Blue Alpha Channel*/
+    /*the intensity of each color is b/n "0-255"/ from black to white,Alpha is about (الشفافية)
+from fully transparent to fully opaque*/
+    background-color: #ff0000ff;/* Color Hex Code*/
+    /*the intensity of each color is b/n "00-FF"*/
+    background-image: url(../imgs/learn-programming.png );
+    background-repeat: no-repeat; /* the default is "repeat" in all direction (hori and vertically)*/
+    /* repeat-x and repeat-y(semanticily) and no repeat will stay in is normal size  */
+    /* background-attachment: fixed;//*scroll is the default and it stays where it is when scrolling
+    while "fixed" is the opposite in the div */
+    background-position: left top;
+    /* I think there is no problem if you write it 'top left' */
+    /*--- background-position by name --- */
+    /* consider the screen as divided into 3 columns with each column 'top,center,bottom' & each row 'right,c,l'
+    so we will have 9 positons */
+    /* left top is the default */
+    /* if you want the second value to be center just right one value b/c the default
+    is center */
+    /*--- background-position by px --- */
+    /* 
+    first value is x and second is y
+    the default is left top(0px 0px)
+    so when x=10px => move it from left to right 10px
+    so when y=10px => move it from top to bottom 10px
+    writing only  one value y will be "center" , to center x do 'center 30px'
+   number is by px
+    */
+    /*--- background-position by % --- */
+    /* 
+    the default is left top(0% 0%)
+    so when x=10% => move it from left to right 10%(of the parent width)
+    so when y=10% => move it from top to bottom 10%(of the parent width)
+    writing only value the other will be "center
+     */
+    background-size: cover;
+     /*
+     ----- background-size----
+     ====== by name======
+    the default is 'auto' , w'h is the normal size of the img
+    'cover' => it covers the content which is afteer being moved(so to cover it , it may strech or it may be cut (trry
+    it by moving the dev tool bar
+    'contain'=> the img must be full visible so it won't be cut (so it may not cover the
+       element fully) 
+    ========by px,%....======
+    'width height'
+    in px the browser will not have control(px will be fixed)
+    % will be based on so '100% 100%', will always cover the content fully but to  adapt it strechs or shrink unlike others in shrink
+
+     */
+
+
+}

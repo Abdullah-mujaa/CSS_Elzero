@@ -1,0 +1,15 @@
+/* 
+opacity is like the alpha in the background-color but in here it changes not only the background but all the content
+opacity = 0.9 , 0.90 , 0.900 (9/10,90/100,900/1000)
+opacity is used in pop-up for it to be focused and the background مشاهب
+                when you hover in an element
+*/
+
+.one {
+    background-color: red;
+    opacity: 0.5;
+}
+
+.two {
+    background-color: rgb(255 0 0 / 10%);
+}

@@ -1,0 +1,79 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: capitalize;
+}
+  /* Assign 01  */
+.ass-1 .parent {
+    background-color: #eee;
+    padding: 20px;
+    margin: 20px auto;
+    width: 400px;
+    height: 250px;
+    text-align: center;
+    -webkit-transition: margin-top .5s;
+    -moz-transition: margin-top .5s;
+    -ms-transition: margin-top .5s;
+    -o-transition: margin-top .5s;
+    transition: margin-top .5s;
+}
+
+.parent:hover {
+    margin-top: 0px;
+}
+
+.ass-1 .child {
+    background-color: #ccc;
+    padding: 20px;
+    margin-top: 10px;
+   -webkit-transition: margin-top 0.5s 0.5s ;
+   -moz-transition: margin-top 0.5s 0.5s ;
+   -ms-transition: margin-top 0.5s 0.5s ;
+   -o-transition: margin-top 0.5s 0.5s ;
+   transition: margin-top 0.5s 0.5s ;
+}
+
+.child:hover {
+    margin-top: 40px;
+}
+
+/* Assign 02 */
+
+ .ass-2 div {
+    width: 400px;
+    margin: auto;
+    font-size: 20px !important;
+    border: none !important;
+    color: transparent !important;
+    background-color: #eee !important;
+    position: relative;
+    text-align: center; /*these line worked for the 'before' too*/
+}
+
+.ass-2 div::before{
+    content: "Elzero";
+    position: absolute;
+    color: black;
+    font-weight: bold;
+} 
+
+
+ /* Assign 03 */
+:root {
+    --mainColor: #009688;
+    --mainPadding: 10px;
+  }
+  
+.ass-3 div {
+    color: var(--mainColor, red);
+    padding: var(--mainPadding , 10px);
+    border: 2px solid var(--mainColor, black);
+    margin-bottom: var(--mainPadding, 10px);
+  }

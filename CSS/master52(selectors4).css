@@ -1,0 +1,31 @@
+/*
+  CSS Selectors
+  - :not(Selectors) , separate selectors by ','
+  - :nth-child(n)
+  - :nth-last-child(n)
+  - :nth-of-type(n) , div:nth-of-type(2) => these is easier than nth-child b/c you would count from the 1st.....
+  - :nth-last-of-type(n)
+Please read more ....
+*/
+
+/* p:not(:first-child) {
+    color: #ff0000;
+} */
+/* p:not(.special) {
+    color: red;
+} */
+/* p:nth-child(2) {
+    color: red;
+} */
+/* p:nth-child(even) {
+    color: red;
+} */
+/* div:nth-last-child(2) {
+    color: red;
+} */
+/* p:nth-of-type(3) {
+    color: red;
+} */
+div:nth-last-of-type(2){
+    color:red;
+}

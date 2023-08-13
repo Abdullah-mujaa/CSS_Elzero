@@ -1,0 +1,147 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --pinkcolor: #e91e63;
+    --bluecolor: #2196F3;
+    --yellowcolor: #FFC107;
+    --maincolor: #eee;
+}
+/* -- Assign-01 -- */
+/* i will not center it in  the page b/c i will do the rest of the ass in these file*/
+.ass-01 div {
+    margin: 50px auto;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 4px solid var(--pinkcolor);
+    border-right-color: transparent;
+    position: relative;
+    animation: 1s spin infinite linear;
+}
+
+.ass-01 div::before {
+    content: "";
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    border: 4px solid var(--bluecolor);
+    border-left-color: transparent;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.ass-01 div::after {
+    content: "";
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    border: 4px solid var(--yellowcolor);
+    border-top-color: transparent;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.ass-02 div:hover {
+    animation-play-state: paused;
+}
+/* -- Assign-02 -- */
+/* i will not center it in  the page b/c i will do the rest of the ass in these file*/
+.ass-02 div {
+    margin: 50px auto;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 4px solid var(--bluecolor);
+    border-bottom-color: transparent;
+    position: relative;
+    animation: 1s spin1 infinite linear paused;
+}
+
+.ass-02 div::before {
+    content: "";
+    display:block;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    border: 4px solid var(--yellowcolor);
+    border-bottom-color: transparent;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    animation: 3s spin1 infinite linear paused;
+}
+
+.ass-02 div::after {
+    content: "";  
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    border: 4px solid black;
+    border-bottom-color: transparent;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    animation: 5s spin1 infinite linear paused;
+
+}
+
+.ass-02 div:hover,
+.ass-02 div:hover::before,
+.ass-02 div:hover::after {
+    animation-play-state: running;
+    background-color: var(--maincolor);
+}
+
+@keyframes spin1 {
+    from {
+        transform: translate(-50% , -50%) rotate(0deg);
+    }
+    to {
+        transform: translate(-50% , -50%) rotate(360deg);
+    }
+}
+/* the blue is faster so fix it */
+/* it took me 2 days to solve it and mohammed galal used flex centering and simplified it....
+but i have learned a lot of things -pseudo: are inline, they are not includeed in border-box,translate is overridden by the transform in the animation so include it in the keyframe instead,and use flex and enough px,%............. */
+/* https://codepen.io/Mohamed-Galal91/pen/jOGNMjz */
+/* -- Assign-03 -- */
+/* i will not center it in  the page b/c i will do the rest of the ass in these file*/
+.ass-03 div {
+    background-color: var(--maincolor);
+    margin: 50px auto;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 4px solid black;
+    border-right-color: transparent;
+    animation: 1s spin infinite linear reverse,1s spin 1s infinite linear reverse,1s spin2 2s infinite linear reverse;
+    /* i think these line brought it closer */
+}
+
+@keyframes spin2 {
+    0%{
+        rotate: 0deg;
+    }
+    30% {
+        rotate: 180deg;
+    }
+    100% {
+        rotate: 360deg;
+    }
+}

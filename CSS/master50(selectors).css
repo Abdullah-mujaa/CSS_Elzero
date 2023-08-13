@@ -1,0 +1,55 @@
+/*
+  CSS Selectors
+hover around the selector and VSU will help
+  - * => all elements
+  - Element => [p, div, h2] => all p or all div....be it parent or child
+  - Element OtherElement => div p => all p after any div (there can be other elements inb/n)
+  - .class-name => any element with these class
+  - #id-name => """"id
+  - .parent .child => targets all .child inside any elements with .parent
+  - .class-one.class-two => targets elements having both classes
+  - .class-name div, .class-name p => grouping ....
+  - Element.class-name => p.class-name => it targets all 'p' with these class (only p) ,important
+  - .parent > .child => Direct Child(not grandchild or ...), it is d/t from 'without >',important
+  b/c without it, any child (grand grand grand...) will take the declaration (see the VSU hover d/ce)
+  ==============
+  - Element + Other Element => [div + p] => the declaration is for 'p' , any p after div (not necessarily child) is targeted
+  - Element ~ Other Elements => [p ~ div] =>(sibling) => all 'div' after p evenif some elements go b/n and this 'div' should be brothers and sisters
+  - [Attribute] => e.g [title] => all elements with title attr will share the declaration
+  - Element[Attribute] => div[title] => targets all divs with these attribute(only divs)
+  - [Attribute=Value] => semantic
+  - Element[Attribute=Value] => input[type="submit"] => there is only one submit so you don't need to give it a class
+  - [Attribute~=Value] => Contains A Word => A separate word not part of a word '5th e.g'
+  - [Attribute*=Value] => Contains A String=> no matter b/n a word or alone
+  - [Attribute^=Value] => Start With A String => starts from that string and continue or not 
+*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+  }
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  /* div + p {
+    color: red;
+  } */
+  /* p ~ div {
+    color: red;
+  } */
+  /* div[title] {
+    color: red;
+  } */
+  /* div[title="S01"] {
+    color: red ;
+  } */
+  /* [title~="Div"] {
+    color: red;
+  } */
+  /* [title*="Div"] {
+    color: red;
+  } */
+  /* [title^="S0"] {
+    color: red;
+  } */
+

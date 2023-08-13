@@ -1,0 +1,24 @@
+div {
+    background-color: red;
+    padding: 10px;
+    /* <!-- to make the three block elements have same width then seta width 
+    but to make a block element width = to the content(using inline-block is not the best practice) use 
+    instead so new feature came 'width: fit-content' w'h is very useful(it is still div but the width is to the conte)
+    */
+    display: inline-block;
+    width: 400px; 
+    /* after you have specified width for the inline-block and you added text it will go 
+    horizontal until it reach the width then goes to the next line */
+    /* but if want a specified width and extends if necessary you set min-width.
+    to have a limit to the extend set max-width
+    having min and max same value is like setting width only so either set different min and max(min will be beginning
+    and max will be end or set only one of the two
+    use-case of max-width is that if user enters text and add more and more text the width won't extend above max*/
+    width: 400px;
+    max-height: 100px;
+    /* the same works for height(height, min, max) so what is the default value for height?
+    it is auto => it will extend as long as you add content */
+    /* width: fit-content; */
+    /* in the presence of widthbut t think fit-content works with the others , min-width/max didn't have effect */
+
+} 

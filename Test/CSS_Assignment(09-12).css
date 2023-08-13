@@ -1,0 +1,43 @@
+/* Assign-01 */
+.ass-01 div {
+    display: inline-block;
+    outline: 5px solid black;
+    margin: 10px;
+    padding: 20px; 
+    background-color: #eee;
+}
+
+.ass-01 .shape-1 {
+    border: 5px solid red;
+}
+
+.ass-01 .shape-2 {
+    border: 5px solid;
+    border-color: blue green;
+}
+
+.ass-01 .shape-3 {
+    border: 5px dashed;
+    border-color: red green  blue yellow;
+}
+/* Assign-02 */
+.ass-02 div {
+    background-color: #eee;
+    padding: 10px;
+    margin: 10px;
+    width: 400px;
+    outline: 5px solid #eee;
+}
+
+.ass-02 .note-red {
+    border-left: 5px solid red;
+}
+
+.ass-02 .note-hidden {
+    visibility: hidden;
+}
+
+.ass-02 .note-green {
+    border-left: 5px solid green;
+}
+

@@ -1,0 +1,38 @@
+/*
+  Child
+  - grid-column: [Grid-Column-Start] [Grid-Column-End] 
+  ----------------- 1/6 starts from first column to the 6th , span 4 => starts from where it is until it covers 4 cols, 2/span 4 starts from 2nd (if it is the 1st element it leaves offset before it ) until 4 col cover. we gave the 4th 'span 5' this didn't cause additional row rather it fall down
+1/6: 1st,2,3,4,5th and no 6 (prpgramming behavior)
+if there is 6 columns and you say 1/8(grid-column:) => this will cause a column added so use instead span 4(no.)
+  - grid-row: [Grid-Row-Start] [Grid-Row-End]: similar to the column
+  - grid-area: [Grid-Row-Start] [Grid-Column-Start] [Grid-Row-End] [Grid-Column-End]  => adv: you start from any where in the parent
+-When grid-column-start is used alone, the grid item by default will span exactly one column. 
+-by short, grid-row and grid -column are like position for grids(in y-axis and x-axis)
+- we can use 'order' just like flex 
+-there can be overrides while using grid-area
+-grid-template =[grid-template-rows] [grid-template-columns]
+*/
+
+* {
+    box-sizing: border-box;
+  }
+  .parent {
+    margin: 20px auto;
+    width: 800px;
+    height: 500px;
+    background-color: #ddd;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(3, auto);
+    gap: 10px 10px;
+    grid-template-areas: "head head nav nav nav nav" "cont cont cont cont cont cont";
+  }
+  .parent div {
+    background-color: red;
+    color: white;
+    padding: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+  }
+

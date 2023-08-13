@@ -1,0 +1,310 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+    --greycolor: #607d8b;
+    --bluecolor: #03a9f4;
+    --mainpadding: 10px;
+    --greycolor2: #999;
+}
+
+/*  Assign 01  */
+
+.ass-01 .grid {
+    background-color: #ddd;
+    padding: 20px;
+    width: 800px;
+    height: 400px;
+    margin: 50px auto;
+    color: white;
+    font-weight: bold;
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    grid-template-rows: 10% 1fr;
+    gap: 20px;
+
+  }
+
+  .ass-01 .grid div {
+    background-color: var(--greycolor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    counter-increment: element-number;
+}
+
+.ass-01 .grid div::before {
+    content: "Element "counter(element-number);
+    color: white;
+}
+
+/*  Assign 02  */
+
+.ass-02 .layout {
+    height: 100vh;
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    grid-template-rows: 7vh 1fr 7vh;
+    grid-template-areas: 
+    "head head head head head head head head head head"
+    "sec sec sec sec sec sec sec sec side side"
+    "foot foot foot foot foot foot foot foot foot foot"
+    ;
+}
+
+.ass-02 .layout header {
+    grid-area: head;
+    background-color: var(--bluecolor);
+}
+
+.ass-02 .layout section {
+    grid-area: sec;
+    background-color: #ff5722;
+}
+
+.ass-02 .layout aside {
+    grid-area: side;
+    background-color: var(--greycolor);
+}
+
+.ass-02 .layout footer {
+    grid-area: foot;
+    background-color: #009688;
+}
+
+.ass-02 .layout section,
+aside {
+    padding: calc(2*var(--mainpadding));
+}
+
+.ass-02 .layout header,
+.ass-02 .layout footer {
+    padding-left: calc(2*var(--mainpadding));
+    display: flex;
+    align-items: center;
+}
+.ass-02 .layout header::before {
+    content: "Header"
+}
+
+.ass-02 .layout section::before {
+    content: "Section"
+}
+
+.ass-02 .layout aside::before {
+    content: "Aside"
+}
+
+.ass-02 .layout footer::before {
+    content: "Footer"
+}
+
+/*  Assign 03  */
+
+.ass-03 .grid {
+    background-color: #ddd;
+    color: white;
+    padding: 20px;
+    width: 800px;
+    height: 400px;
+    margin: 50px auto;
+    font-weight: bold;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: auto 1fr 1fr auto;
+    grid-template-rows: 1fr auto;
+  }
+
+.ass-03 .grid div{
+    background-color: #403f3f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+/*  Assign 04  */
+
+.ass-04 .grid {
+    background-color: #ddd;
+    color: white;
+    font-weight: bold;
+    padding: 20px;
+    width: 800px;
+    height: 400px;
+    margin: 50px auto;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(6,auto);
+  }
+
+.ass-04 .grid div {
+    background-color: var(--bluecolor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+.ass-04 .grid .one {
+    grid-area: 6/1/6/span 3;
+}
+
+.ass-04 .grid .two {
+    grid-area: 2/1/3/3;
+}
+
+.ass-04 .grid .three {
+    grid-area: 2/3/3;
+}
+
+.ass-04 .grid .four {
+    grid-area: 3/1;
+}
+
+.ass-04 .grid .five {
+    grid-area: 3/2/span 3/span 2;
+}
+
+.ass-04 .grid .six {
+    grid-area: 4/1;
+}
+
+.ass-04 .grid .seven {
+    grid-area: 5/1;
+}
+
+.ass-04 .grid .eight {
+    grid-area: 1/1/2/4;
+}
+
+/* Assign 05 */
+
+.ass-05 .grid {
+  background-color: #ddd;
+  padding: 20px;
+  width: 800px;
+  height: 400px;
+  margin: 50px auto;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  display: grid;
+  column-gap: 20px;
+  grid-template-columns: auto auto;
+  align-content: space-between;
+}
+
+.ass-05 .grid div {
+    background-color: #e91e63;
+}
+
+/* Assign 06 */
+
+.ass-06 .grid {
+    background-color: #eee;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(4,auto);
+    grid-template-rows: repeat(4,auto);
+    gap: 10px;
+}
+
+.ass-06 .grid div {
+    background-color: white;
+    padding: var(--mainpadding);
+    border-bottom: 5px solid #F44336;
+    position: relative;
+}
+
+.ass-06 .grid .shady,
+.ass-06 .grid .mahmoud,
+.ass-06 .grid .ibrahim {
+    background-color: black;
+    color: white;
+}
+
+.ass-06 .grid .osama {
+    grid-area: 1/1/1/3;
+}
+
+.ass-06 .grid .shady {
+    grid-area: 1/4/4;
+}
+
+.ass-06 .grid .mohamed {
+    grid-area: 2/1/4;
+}
+
+.ass-06 .grid .mahmoud {
+    grid-area: 2/2/3/4;
+}
+
+.ass-06 .grid .ezz {
+    grid-area: 3/2/4/4;
+}
+
+.ass-06 .grid div .one {
+    font-weight: bold;
+}
+
+.ass-06 .grid div h3{
+    position: relative;
+}
+.ass-06 .grid .osama h3::before,
+.ass-06 .grid .shady h3::before,
+.ass-06 .grid .mahmoud h3::before {
+    content: "Full-Stack Developer";
+    font-weight: bold;
+    font-size: 14px;
+    color:  var(--greycolor2);
+    position: absolute;
+    left: 0;
+    bottom: -20px;
+}
+
+.ass-06 .grid .ahmed h3::before,
+.ass-06 .grid .ibrahim h3::before,
+.ass-06 .grid .mohamed-sayed h3::before, 
+.ass-06 .grid .eman h3::before, 
+.ass-06 .grid .gamal h3::before{
+    content: "IOS Developer";
+    font-weight: bold;
+    font-size: 14px;
+    color:  var(--greycolor2);
+    position: absolute;
+    left: 0;
+    bottom: -20px;
+} 
+
+.ass-06 .grid .ezz h3::before {
+    content: "Front-End Developer";
+    font-weight: bold;
+    font-size: 14px;
+    color:  var(--greycolor2);
+    position: absolute;
+    left: 0;
+    bottom: -20px;
+}
+
+.ass-06 .grid .mohamed h3::before {
+    content: ".Net Developer";
+    font-weight: bold;
+    font-size: 14px;
+    color:  var(--greycolor2);
+    position: absolute;
+    left: 0;
+    bottom: -20px;
+}
+
+
+.ass-06 .grid div::after {
+    content: '"';
+    color: var(--greycolor2);
+    font-size: 2em;
+    position: absolute;
+    right: 10px;
+    bottom: -10px;}
+

@@ -1,0 +1,232 @@
+/* 
+---Pseudo Classes (مزيفة) : not actual existing class (related to states)
+--hover
+--checked (in checkbox)
+--visited (after been visited)
+--empty is for element without children
+--focus => for input elements example border color change/background
++active
+*/
+
+.one {
+    background-color: red;
+    color: white;
+}
+
+.two {
+    background-color: #eee;
+    width: 100px;
+    height: 100px;
+}
+
+a {
+    color: green;
+    text-decoration: none;
+}
+
+a:hover {
+    color: red;
+}
+
+.ch:checked {
+    display: none;
+}
+
+a:visited {
+    color: blue;
+}
+
+/* div:empty {
+    border: 5px solid red;
+} */
+
+/* :empty {
+    border: 2px solid red
+} */
+
+.in {
+    border: 2px solid black;
+}
+
+.in:focus {
+    border-color: yellow;
+    /* You can edit color by force state in dev tools....*/
+    outline: none;
+    /* not to cover the yellow or ...*/
+    background-color: red;
+}
+
+/* ======== */
+/* 
+---Pseudo Elements(::)
+-- they can be css ed like any other element
+--first letter is like the span(an element) so you do CSS for it.
+the difference in the example is that in one-1 'span' is real element(found in the html)while by pseudo it is fake element
+--first line => it is not static (if the window extend the first line increse and will have the feature)
+--::selection(global),p::selection(for p only) => it is about when words are selected
+*/
+
+.one-1 span {
+    display: inline-block;
+    background-color: red;
+    color: white;
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.two-2::first-letter {
+    display: inline-block;
+    background-color: red;
+    color: white;
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.three-3::first-line {
+    font-weight: bold;
+    color: green;
+}
+
+.four-4::selection {
+    background-color: black;
+    color: yellow;
+}
+
+/* ======== */
+/* 
+--Before ,After , content
+*/
+
+.parent {
+    margin-bottom: 20px;
+    overflow: hidden;
+    counter-increment: members-counter;
+    /* any name u want*/
+}
+
+.one-01 {
+    background-color: #eee;
+    padding: 10px;
+    width: 600px;
+    float: left;
+    position: relative;
+}
+
+.user {
+    background-color: #eee;
+    padding: 10px;
+    width: 50px;
+    margin-right: 20px;
+    height: 55.5px;
+    float: left;
+    font-size: 50px;
+    text-align: center;
+}
+
+hr {
+    margin: 20px 0;
+}
+
+/* Now we will do vertical line in the end of each 'one-01' so we added span and .... */
+
+.one-01 .pipeline {
+    width: 5px;
+    background-color: #08a190;
+    position: absolute;
+    height: 100%;
+    right: -10px;
+    top: 0;
+}
+
+/* A better way is: */
+.one-01::after{
+    content: ""; /* To make after appear you need these line*/
+    width: 5px;
+    height: 100%;
+    background-color: #08a190;
+    position: absolute;
+    right: -10px;
+    top: 0;
+}
+
+.one-01::befre {
+    content: "Content from CSS";
+    color: red;
+    padding: 10px;
+    background-color: #b8b8e5;
+    display: inline-block;
+}
+
+.one-01::befre {
+    content: "";
+    /*you can have here url(img,vid,aud..)(too unusual)*/
+    /* width: 20px;
+    height: 20px; */
+    width: 0px;
+    height: 0px;
+    /* background-color: red; */
+    /* background-color: white; */
+    /* we turned of the white bakground is b/c if you make it backward it will cover the paragraph */
+    position: absolute;
+    /* left: -10px; intersting: we made half of the element go out of the parent */
+    left: -20px;
+    top: 50%;
+    margin-top: -10px;
+    /* intersting: we made half of the element on 50% above and the half in the 50% below + we moved it without positions(lrtb)*/
+    border-width: 10px;
+    border-style: solid;
+    /* border-color: red #009688 blue black; */
+    border-color: transparent #009688 transparent transparent;
+    /*transparent is the default value of the border*/
+
+
+}
+
+.one-01::after {
+    content: counter(members-counter);
+    /*we made automatic counter by css*/
+    position: absolute;
+    background-color: red;
+    color: white;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    font-weight: bold;
+    top: 50%;
+    right: -10px;
+    margin-top: -10px;
+}
+
+.one-01::befre {
+    content: attr(data-text);
+    display: none;
+    background-color: royalblue;
+}
+
+.one-01:hover::befre {
+    display: block;
+    /* used for making tool tip (4:19) */
+}
+
+ul {
+    list-style: none;
+}
+
+ul li {
+    position: relative;
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+
+ul li::before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    top: 50%;
+    left: -10px;
+    margin-top: -10px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent green transparent transparent;
+}

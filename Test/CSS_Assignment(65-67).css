@@ -1,0 +1,102 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --maincolor: #eee;
+    --bluecolor: #03a9f4;
+    --pinkcolor: #e91e63;
+}
+
+
+/* Assign-01 */
+.ass-01 div {
+    background-color: var(--maincolor);
+    color: var(--bluecolor);
+    font-size: 30px;
+    font-weight: bold;
+    border: 2px solid #ddd;
+    width: 330px;
+    height: 212.7px;
+    ;
+    margin: 100px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.ass-01 div::after {
+    content: "";
+    position: absolute;
+    width: 330px;
+    height: 222.7px;
+    ;
+    transform: rotate(-4deg);
+    background-color: var(--bluecolor);
+    z-index: -1;
+}
+
+.ass-01 div::before {
+    content: "";
+    position: absolute;
+    width: 103.4%;
+    height: 222.7px;
+    ;
+    transform: rotate(4deg);
+    background-color: var(--pinkcolor);
+
+    z-index: -2;
+}
+/* when you have time fix the height and weight */
+/* Assign-02 */
+.ass-02 div {
+    background-color: var(--maincolor);
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 50%;
+    top: 160%; /*these was 50% and it is changed just to make the above assignment visible*/
+    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bold;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.ass-02 div:before,
+.ass-02 div:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 10px solid ;
+}
+/* these grouping was taken from Mo.galal */
+
+.ass-02 div:before {
+    border-color: var(--bluecolor) transparent var(--bluecolor) var(--bluecolor) ;
+    border: 10px solid var(--bluecolor);
+    border-right-color: transparent;
+    transform: scale(1.1);
+    transition: transform .5s .5s;
+}
+
+.ass-02 div::after {
+    border-color: var(--pinkcolor) var(--pinkcolor) var(--pinkcolor) white;
+    /* border: 10px solid var(--pinkcolor);
+    border-left-color: white; these is a better way Mo.Galal*/
+    transition: transform .5s ;
+}
+
+.ass-02 div:hover::after {
+    transform: rotate(1turn);
+}
+
+.ass-02 div:hover::before {
+    transform: scale(1.1) rotate(1turn);
+}

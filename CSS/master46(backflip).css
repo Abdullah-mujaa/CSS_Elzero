@@ -1,0 +1,46 @@
+/* 
+backface-visibility=>it is about when an element flips should the filped side visible or not.,Default is visible
+for eg. give back => rotatey(180 degree) and check backface-visibility: hidden
+transform-style: preserve-3d; => this adv. is when you flip the parent ,all the childs preserve their 3D.
+An element’s perspective only applies to direct descendant children, in this case .card. In order for subsequent children to inherit a parent’s perspective, and live in the same 3D space, the parent can pass along its perspective with transform-style: preserve-3d. Without 3D transform-style, the faces of the card would be flattened with its parents, and the back face’s rotation would be nullified.https://3dtransforms.desandro.com/card-flip
+*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+  }
+  .container {
+    margin: 40px auto;
+    width: 200px;
+    perspective: 600px;
+  }
+  .box {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+    transform-origin: right center;
+  }
+  .box:hover {
+    transform: translateX(-100%) rotateY(-180deg);
+  }
+  .box .face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 30px;
+    color: white;
+    backface-visibility: hidden;
+  }
+  .box .front {
+    background-color: red;
+  }
+  .box .back {
+    background-color: green;
+    transform: rotateY(180deg);
+  }

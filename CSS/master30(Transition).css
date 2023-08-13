@@ -1,0 +1,42 @@
+/* 
+--Transition(from state to state)
+----------2 things are necessary : tr.property and duration
+---Duration (before and after action)
+----1s=1000ms,default=0s.
+---Property
+----transition-property: all(default); is not recommended b/c all the website will be dancing.
+---Delay(after hover(and unhover) for eg.),default=0s.
+---Timing Function(give less focus)
+----ease(default): slow fast slow
+----linear:semantic
+----ease-in: slow or ease in the beginning
+----ease-out: opposite
+----ease-in-out: all slow (watch dev tool) (choose 1 4 all we5las)
+shorthand => transition: width 3s , height 1s; (=) transition-property: width , height;
+                                                   transition-duration: 3s , 1s;
+ */ 
+
+* {
+    box-sizing: border-box;
+}
+
+.one {
+    background-color: #eee;
+    width: 200px;
+    height: 100px;
+    /* transition-duration: 1s;
+    transition-delay: .2s; */
+    /*transition-property: margin-left , margin-top;the width will change immediately*/
+    /* transition-property: width;
+    transition-timing-function: ease ; */
+    transition:all 0.5s 2s linear;
+
+}
+
+.one:hover {
+    /* margin-left: 20px;
+    margin-top: 20px; */
+    width: 280px;
+    height: 120px;
+}
+

@@ -1,0 +1,40 @@
+.scene {
+    width: 200px;
+    height: 260px;
+    perspective: 600px;
+}
+
+.card {
+    width: 100%;
+    height: 100%;   /*Setting the two 100% will make the transform origin at the center*/
+    position: relative;
+    transition: transform 1s;
+    transform-style: preserve-3d; /* b/c the prespective applies to the child i.e card . to make the faces also 3d this line is needed*/
+    /* transform-origin: center right; */
+}
+
+.card_face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.card_face--front{
+    background-color: red;
+}
+
+.card_face--back{
+    background-color: blue;
+    transform: rotateY(180deg);
+}
+
+.card:hover{
+    transform: rotatey(180deg);
+    /* transform: translateX(-100%) rotateY(-180deg); */
+}

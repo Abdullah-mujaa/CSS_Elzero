@@ -1,0 +1,21 @@
+div {
+    background-color: #ddd;
+    /* الهامش الداخلي = padding (can't be -ve)(it can be %/px)*/
+    /* Top Right Bottom Left */
+    /* 10px 10px 10px 10px */
+    /* padding: 10px; */
+    
+    /* Top Right Bottom Left */
+    /* 10px 20px 10px 20px */
+    /* padding: 10px 20px; */
+    /* this  two are top and right but the others take from the facing i.e right faces left
+    and top faces bottom */
+    
+    /* Top Right Bottom Left */
+    /* 10px 20px 15px 20px */
+    /* padding: 10px 20px 15px */
+
+    /* padding: 0 0 10px 0; */
+    padding-bottom: 10px;
+    padding-top: 10px;
+}

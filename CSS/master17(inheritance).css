@@ -1,0 +1,61 @@
+/* 
+...inheritance
+.....in the example h3 inherited text-align(and those visible in devtool),blurred(not inherited),crossed(those you 
+      have that property initially)
+       --inheritance is for properties not available in  the child
+-------you can give value for prpoerties(those w'h are not inherited automatically)'inherited' so you will save time 
+        and space b/c  once the value is changed in the parent all the children will take it.
+*/
+/* div {
+    text-align: center;
+    padding: 20px;
+    background-color: #eee;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 2px solid red;
+}
+
+div p {
+    border: 2px solid;
+    border-color: inherit;
+    padding: inherit;
+} */
+
+/* ========= */
+/* 
+web safe fonts(unusual now) => are those available on the known OS
+if you use a random font it may not appear in the user browser so the solution is 'web fonts'
+web fonts => will work even if the user don't have it in his device
+            google fonts are valid to use it and it will appear as we said
+-More than one font-family is set as fallback
+-to use "font-family: 'Cairo', sans-serif;" we took its link and put it in the title and then we specified it by
+ CSS .(you can download the font in your PC and use it locally without need to use google server
+  (@font-face {
+  font-family: "myFont";
+  src: url("myFont.woff2");
+})
+
+*/
+
+/* .with-ser {
+     font-family: 'Times New Roman', Times, serif; anything that have space put them inside "" ('Times New Roman') 
+}
+
+.san-ser {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.with-ser,
+.san-ser {
+    background-color: #ddd;
+    padding: 10px;
+} */
+
+body {
+    font-family: 'Cairo', sans-serif;
+}
+
+div {
+    padding: 10px;
+    background-color: #ddd;
+}
